@@ -45,6 +45,15 @@ Until then the form shows a "not connected yet" notice and won't submit.
 - Formspree form ID (see above)
 - Domain in `app/layout.js`, `app/sitemap.js`, `app/robots.js` (currently `akshaycomputers.in`)
 
+## Git / GitHub
+
+Remote: https://github.com/ayush28gadve/AK_Computers (branch `main`).
+
+Auto-push is enabled via a `post-commit` git hook (`.git/hooks/post-commit`):
+every `git commit` automatically runs `git push origin main`. Note that git
+hooks are local-only — if you clone this repo on another machine, recreate
+the hook file there.
+
 ## Deployment (Vercel)
 
 1. Push this repo to GitHub
