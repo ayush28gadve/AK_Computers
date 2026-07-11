@@ -9,15 +9,15 @@ const ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || '';
 const isConfigured = ENDPOINT && !ENDPOINT.includes('REPLACE_WITH_REAL_ID');
 
 const inputClasses =
-  'w-full min-h-[48px] rounded-card border border-white/15 bg-white/5 px-4 py-3 text-base text-white placeholder:text-txt-muted backdrop-blur-sm transition-all duration-300 focus:border-neon-cyan focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-neon-cyan/30 focus:shadow-glow-cyan';
+  'w-full min-h-[48px] rounded-card border border-orange-coral/20 bg-white px-4 py-3 text-base text-charcoal-deep placeholder:text-gray-muted transition-all duration-300 focus:border-orange-coral focus:outline-none focus:ring-2 focus:ring-orange-coral/25 focus:shadow-glow-peach';
 
 function Field({ label, id, error, required, children }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-white">
+      <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-charcoal-deep">
         {label}
         {required && (
-          <span className="text-neon-pink" aria-hidden="true">
+          <span className="text-orange-burnt" aria-hidden="true">
             {' '}
             *
           </span>
@@ -25,7 +25,7 @@ function Field({ label, id, error, required, children }) {
       </label>
       {children}
       {error && (
-        <p role="alert" className="mt-1 text-sm text-neon-pink">
+        <p role="alert" className="mt-1 text-sm text-red-600">
           {error}
         </p>
       )}
@@ -71,7 +71,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
       {!isConfigured && (
-        <p className="rounded-card border border-amber-400/40 bg-amber-400/10 px-4 py-3 text-sm text-amber-300">
+        <p className="rounded-card border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800">
           Note: the contact form is not connected yet. Please reach us on WhatsApp or by
           phone while we finish setting it up.
         </p>
@@ -130,7 +130,7 @@ export default function ContactForm() {
           <select
             id="service"
             aria-invalid={errors.service ? 'true' : 'false'}
-            className={`${inputClasses} [&>option]:bg-dark-2 [&>option]:text-white`}
+            className={inputClasses}
             defaultValue=""
             {...register('service', { required: 'Please select a service.' })}
           >
@@ -160,7 +160,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-card bg-gradient-to-r from-neon-lime to-emerald-400 px-6 py-3 text-base font-bold text-dark-bg shadow-glow-lime transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(132,204,22,0.6)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-6 py-3 text-base font-bold text-white shadow-glow-orange transition-all duration-300 ease-bounce hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(255,107,53,0.7)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === 'submitting' ? (
           <>
@@ -175,12 +175,12 @@ export default function ContactForm() {
 
       <div aria-live="polite">
         {status === 'success' && (
-          <p className="rounded-card border border-neon-lime/40 bg-neon-lime/10 px-4 py-3 text-sm font-semibold text-neon-lime">
+          <p className="rounded-card border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800">
             Thanks! We&apos;ll contact you within 24 hours.
           </p>
         )}
         {status === 'error' && (
-          <p className="rounded-card border border-neon-pink/40 bg-neon-pink/10 px-4 py-3 text-sm font-semibold text-neon-pink">
+          <p className="rounded-card border border-red-300 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
             Sorry, something went wrong. Please try WhatsApp or call us directly.
           </p>
         )}

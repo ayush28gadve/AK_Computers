@@ -38,20 +38,20 @@ export default function StatCounter({ value, suffix = '', label, icon }) {
   return (
     <div
       ref={ref}
-      className="glass-card flex flex-col items-center gap-2 p-6 text-center transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-glow-cyan"
+      className="glass-card flex flex-col items-center gap-2 p-6 text-center transition-all duration-300 hover:border-orange-coral/40 hover:shadow-glow-orange"
     >
-      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-neon-cyan/30 bg-neon-cyan/10 text-neon-cyan shadow-glow-cyan transition-transform duration-300 hover:rotate-12 hover:scale-110">
+      <span className="animate-float flex h-12 w-12 items-center justify-center rounded-full border border-orange-coral/30 bg-orange-coral/10 text-orange-coral shadow-glow-peach transition-transform duration-300 hover:rotate-12 hover:scale-110">
         <Icon name={icon} className="h-6 w-6" />
       </span>
       <span
-        className={`font-heading text-4xl font-bold text-white transition-all duration-500 ${
-          done ? 'drop-shadow-[0_0_12px_rgba(0,212,255,0.7)]' : ''
+        className={`font-heading text-4xl font-bold text-charcoal-deep transition-all duration-500 ${
+          done ? 'drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]' : ''
         }`}
       >
         {display}
         {suffix}
       </span>
-      <span className="text-txt-secondary">{label}</span>
+      <span className="text-charcoal-soft">{label}</span>
     </div>
   );
 }

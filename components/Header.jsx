@@ -27,31 +27,31 @@ export default function Header() {
   }, [pathname]);
 
   const linkClasses = (href) =>
-    `relative pb-1 text-base font-semibold transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-neon-cyan after:to-neon-purple after:transition-all after:duration-300 hover:text-neon-cyan ${
+    `relative pb-1 text-base font-semibold transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-orange-coral after:to-gold-bright after:transition-all after:duration-300 hover:text-orange-coral hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.4)] ${
       pathname === href
-        ? 'text-neon-cyan after:w-full'
-        : 'text-white after:w-0 hover:after:w-full'
+        ? 'text-orange-coral after:w-full'
+        : 'text-charcoal-deep after:w-0 hover:after:w-full'
     }`;
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? 'border-white/10 bg-dark-bg/75 shadow-card backdrop-blur-md'
-          : 'border-transparent bg-dark-bg/40 backdrop-blur-sm'
+          ? 'border-orange-coral/15 bg-white/95 shadow-medium-orange backdrop-blur-md'
+          : 'border-transparent bg-white/75 backdrop-blur-sm'
       }`}
     >
       {/* Scroll progress bar */}
       <motion.div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-0.5 origin-left bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink"
+        className="absolute inset-x-0 top-0 h-0.5 origin-left bg-gradient-to-r from-orange-coral via-gold-bright to-orange-coral"
         style={{ scaleX: progress }}
       />
 
       <div className="container-max flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-heading text-xl font-bold text-white transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(0,212,255,0.8)]"
+          className="font-heading text-xl font-bold text-charcoal-deep transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]"
         >
           Akshay <span className="text-gradient">Computers</span>
         </Link>
@@ -72,7 +72,7 @@ export default function Header() {
             href={contactInfo.whatsappHref}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-card bg-gradient-to-r from-neon-lime to-emerald-400 px-5 py-2.5 font-bold text-dark-bg shadow-glow-lime transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(132,204,22,0.6)]"
+            className="animate-glow-pulse inline-flex min-h-[44px] items-center gap-2 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-5 py-2.5 font-bold text-white transition-all duration-300 ease-bounce hover:-translate-y-0.5 hover:scale-105"
           >
             <MessageCircle className="h-5 w-5" aria-hidden="true" />
             Chat on WhatsApp
@@ -82,7 +82,7 @@ export default function Header() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-card text-white transition-colors hover:text-neon-cyan lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-card text-charcoal-deep transition-colors hover:text-orange-coral lg:hidden"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
@@ -96,7 +96,7 @@ export default function Header() {
         {menuOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-charcoal-deep/40 backdrop-blur-sm lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -105,7 +105,7 @@ export default function Header() {
             />
             <motion.nav
               aria-label="Mobile navigation"
-              className="fixed left-0 top-0 z-50 flex h-screen w-[min(80vw,300px)] flex-col gap-2 border-r border-white/10 bg-dark-2/95 p-6 pt-20 backdrop-blur-md lg:hidden"
+              className="fixed left-0 top-0 z-50 flex h-screen w-[min(80vw,300px)] flex-col gap-2 border-r border-orange-coral/15 bg-cream/95 p-6 pt-20 backdrop-blur-md lg:hidden"
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
@@ -113,7 +113,7 @@ export default function Header() {
             >
               <button
                 type="button"
-                className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center text-white transition-transform duration-300 hover:rotate-90 hover:text-neon-cyan"
+                className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center text-charcoal-deep transition-transform duration-300 hover:rotate-90 hover:text-orange-coral"
                 aria-label="Close menu"
                 onClick={() => setMenuOpen(false)}
               >
@@ -130,26 +130,26 @@ export default function Header() {
                     href={link.href}
                     className={`block rounded-card px-4 py-3 text-base font-semibold transition-colors ${
                       pathname === link.href
-                        ? 'bg-neon-cyan/10 text-neon-cyan'
-                        : 'text-white hover:bg-white/5 hover:text-neon-cyan'
+                        ? 'bg-orange-coral/10 text-orange-coral'
+                        : 'text-charcoal-deep hover:bg-orange-apricot/20 hover:text-orange-coral'
                     }`}
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-              <div className="mt-4 flex flex-col gap-3 border-t border-white/10 pt-4">
+              <div className="mt-4 flex flex-col gap-3 border-t border-orange-coral/15 pt-4">
                 <a
                   href={contactInfo.whatsappHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-neon-lime to-emerald-400 px-4 py-3 font-bold text-dark-bg shadow-glow-lime"
+                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-4 py-3 font-bold text-white shadow-glow-orange"
                 >
                   <MessageCircle className="h-5 w-5" aria-hidden="true" /> WhatsApp
                 </a>
                 <a
                   href={contactInfo.phoneHref}
-                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-neon-cyan to-neon-blue px-4 py-3 font-bold text-dark-bg shadow-glow-cyan"
+                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-orange-golden to-gold-bright px-4 py-3 font-bold text-charcoal-deep shadow-glow-gold"
                 >
                   <Phone className="h-5 w-5" aria-hidden="true" /> Call Now
                 </a>

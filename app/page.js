@@ -31,7 +31,7 @@ export default function HomePage() {
       <Hero />
 
       {/* Trust indicators */}
-      <section className="bg-dark-2/40" aria-label="Company statistics">
+      <section className="bg-orange-apricot/20" aria-label="Company statistics">
         <div className="container-max section-padding">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => (
@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       {/* Why choose us */}
-      <section className="bg-dark-2/40" aria-labelledby="why-choose-us">
+      <section className="bg-orange-apricot/20" aria-labelledby="why-choose-us">
         <div className="container-max section-padding">
           <SectionHeading
             title="Why Choose Akshay Computers"
@@ -75,12 +75,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyChooseUs.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.1}>
-                <div className="glass-card flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-neon-lime/40 hover:shadow-glow-lime">
-                  <span className="animate-float flex h-14 w-14 items-center justify-center rounded-full border border-neon-lime/30 bg-neon-lime/10 text-neon-lime">
+                <div className="glass-card flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-gold-bright/60 hover:shadow-glow-gold">
+                  <span className="animate-float flex h-14 w-14 items-center justify-center rounded-full border border-orange-golden/40 bg-orange-golden/10 text-orange-golden">
                     <Icon name={item.icon} className="h-7 w-7" />
                   </span>
-                  <h3 className="font-heading text-lg font-bold text-white">{item.title}</h3>
-                  <p className="text-sm text-txt-secondary">{item.description}</p>
+                  <h3 className="font-heading text-lg font-bold text-charcoal-deep">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-charcoal-soft">{item.description}</p>
                 </div>
               </Reveal>
             ))}
@@ -95,15 +97,17 @@ export default function HomePage() {
           <ol className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.1}>
-                <li className="glass-card relative flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-neon-purple/40 hover:shadow-glow-purple">
-                  <span className="absolute -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-neon-cyan to-neon-purple font-heading text-sm font-bold text-dark-bg shadow-glow-cyan">
+                <li className="glass-card relative flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-orange-burnt/40 hover:shadow-glow-orange">
+                  <span className="absolute -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-orange-coral to-gold-bright font-heading text-sm font-bold text-white shadow-glow-orange">
                     {index + 1}
                   </span>
-                  <span className="mt-2 flex h-12 w-12 items-center justify-center rounded-card border border-neon-purple/30 bg-neon-purple/10 text-neon-purple transition-transform duration-300 hover:rotate-12 hover:scale-110">
+                  <span className="mt-2 flex h-12 w-12 items-center justify-center rounded-card border border-orange-burnt/30 bg-orange-burnt/10 text-orange-burnt transition-transform duration-300 hover:rotate-12 hover:scale-110">
                     <Icon name={step.icon} className="h-6 w-6" />
                   </span>
-                  <h3 className="font-heading text-lg font-bold text-white">{step.title}</h3>
-                  <p className="text-sm text-txt-secondary">{step.description}</p>
+                  <h3 className="font-heading text-lg font-bold text-charcoal-deep">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-charcoal-soft">{step.description}</p>
                 </li>
               </Reveal>
             ))}
@@ -112,7 +116,7 @@ export default function HomePage() {
       </section>
 
       {/* Team preview */}
-      <section className="bg-dark-2/40" aria-labelledby="team-preview">
+      <section className="bg-orange-apricot/20" aria-labelledby="team-preview">
         <div className="container-max section-padding">
           <SectionHeading
             title="Meet Our Expert Team"
@@ -155,7 +159,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-dark-2/40" aria-labelledby="testimonials">
+      <section className="bg-orange-apricot/20" aria-labelledby="testimonials">
         <div className="container-max section-padding">
           <SectionHeading
             title="What Our Customers Say"
@@ -164,21 +168,21 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {testimonials.map((testimonial, index) => (
               <Reveal key={testimonial.author} delay={index * 0.1}>
-                <figure className="glass-card flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neon-pink/40 hover:shadow-glow-pink">
+                <figure className="glass-card flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-warm/50 hover:shadow-glow-gold">
                   <div
-                    className="flex gap-1 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.6)]"
+                    className="flex gap-1 text-gold-bright drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
                     aria-label="5 out of 5 stars"
                   >
                     {Array.from({ length: 5 }).map((_, starIndex) => (
                       <Star key={starIndex} className="h-5 w-5 fill-current" aria-hidden="true" />
                     ))}
                   </div>
-                  <blockquote className="flex-1 text-gray-200">
+                  <blockquote className="flex-1 text-charcoal-deep">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <figcaption className="text-sm">
-                    <span className="font-semibold text-white">{testimonial.author}</span>
-                    <span className="text-txt-secondary">, {testimonial.org}</span>
+                    <span className="font-semibold text-charcoal-deep">{testimonial.author}</span>
+                    <span className="text-charcoal-soft">, {testimonial.org}</span>
                   </figcaption>
                 </figure>
               </Reveal>
@@ -202,11 +206,11 @@ export default function HomePage() {
               />
             </div>
           </Reveal>
-          <p className="mt-8 text-center text-txt-secondary">
+          <p className="mt-8 text-center text-charcoal-soft">
             Still have questions?{' '}
             <Link
               href="/contact"
-              className="font-semibold text-neon-cyan hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
+              className="font-semibold text-orange-coral hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.6)]"
             >
               Get in touch
             </Link>

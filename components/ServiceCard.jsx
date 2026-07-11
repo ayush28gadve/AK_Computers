@@ -4,22 +4,27 @@ import Icon from './Icon';
 
 export default function ServiceCard({ icon, title, description, href = '/services' }) {
   return (
-    <div className="glass-card group relative flex h-full flex-col gap-4 overflow-hidden p-6 transition-all duration-300 ease-smooth hover:-translate-y-2 hover:border-neon-cyan/40 hover:shadow-glow-cyan">
+    <div className="glass-card group relative flex h-full flex-col gap-4 overflow-hidden p-6 transition-all duration-300 ease-bounce hover:-translate-y-2 hover:border-orange-coral/50 hover:shadow-glow-orange-lg">
       {/* corner accent line */}
       <span
         aria-hidden="true"
-        className="absolute right-0 top-0 h-px w-16 bg-gradient-to-l from-neon-cyan to-transparent opacity-60 transition-all duration-300 group-hover:w-24 group-hover:opacity-100"
+        className="absolute right-0 top-0 h-px w-16 bg-gradient-to-l from-orange-coral to-transparent opacity-60 transition-all duration-300 group-hover:w-24 group-hover:opacity-100"
       />
-      <span className="flex h-12 w-12 items-center justify-center rounded-card border border-neon-cyan/30 bg-neon-cyan/10 text-neon-cyan transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:shadow-glow-cyan">
+      {/* shimmer sweep on hover */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 transition-all duration-700 group-hover:left-full group-hover:opacity-100"
+      />
+      <span className="flex h-12 w-12 items-center justify-center rounded-card border border-orange-coral/30 bg-orange-coral/10 text-orange-coral transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:shadow-glow-orange">
         <Icon name={icon} className="h-6 w-6" />
       </span>
-      <h3 className="font-heading text-lg font-bold text-white transition-colors duration-300 group-hover:text-neon-cyan">
+      <h3 className="font-heading text-lg font-bold text-charcoal-deep transition-colors duration-300 group-hover:text-orange-coral">
         {title}
       </h3>
-      <p className="flex-1 text-sm leading-relaxed text-txt-secondary">{description}</p>
+      <p className="flex-1 text-sm leading-relaxed text-charcoal-soft">{description}</p>
       <Link
         href={href}
-        className="inline-flex items-center gap-1 text-sm font-semibold text-neon-cyan transition-all duration-300 hover:gap-2 hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)]"
+        className="inline-flex items-center gap-1 text-sm font-semibold text-orange-coral transition-all duration-300 hover:gap-2 hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.6)]"
       >
         Learn More <ArrowRight className="h-4 w-4" aria-hidden="true" />
       </Link>

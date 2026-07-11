@@ -32,18 +32,20 @@ export default function TeamPage() {
         </div>
       </section>
 
-      <section className="bg-dark-2/40" aria-labelledby="team-values">
+      <section className="bg-orange-apricot/20" aria-labelledby="team-values">
         <div className="container-max section-padding">
           <SectionHeading title="Our Commitments" subtitle="The values behind every job we do" />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {teamValues.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.1}>
-                <div className="glass-card flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-neon-cyan/40 hover:shadow-glow-cyan">
-                  <span className="animate-float flex h-14 w-14 items-center justify-center rounded-full border border-neon-cyan/30 bg-neon-cyan/10 text-neon-cyan">
+                <div className="glass-card flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-orange-coral/40 hover:shadow-glow-orange">
+                  <span className="animate-float flex h-14 w-14 items-center justify-center rounded-full border border-orange-coral/30 bg-orange-coral/10 text-orange-coral">
                     <Icon name={value.icon} className="h-7 w-7" />
                   </span>
-                  <h3 className="font-heading text-lg font-bold text-white">{value.title}</h3>
-                  <p className="text-sm text-txt-secondary">{value.description}</p>
+                  <h3 className="font-heading text-lg font-bold text-charcoal-deep">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm text-charcoal-soft">{value.description}</p>
                 </div>
               </Reveal>
             ))}

@@ -5,7 +5,7 @@ export default function SectionHeading({ title, subtitle }) {
         {title}
       </h2>
       <div className="gradient-line mx-auto mt-4 max-w-[120px] rounded-full" aria-hidden="true" />
-      {subtitle && <p className="mt-4 text-lg text-txt-secondary">{subtitle}</p>}
+      {subtitle && <p className="mt-4 text-lg text-charcoal-soft">{subtitle}</p>}
     </div>
   );
 }

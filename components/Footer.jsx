@@ -6,16 +6,16 @@ const footerServices = ['cctv', 'laptop', 'networking', 'office-setup', 'amc', '
 
 export default function Footer() {
   return (
-    <footer className="relative bg-dark-3 text-white">
-      {/* Animated gradient top border */}
-      <div className="gradient-line animate-gradient-shift" style={{ backgroundSize: '200% auto' }} aria-hidden="true" />
+    <footer className="relative bg-charcoal-deep text-white">
+      {/* Animated warm gradient top border */}
+      <div className="gradient-line" aria-hidden="true" />
 
       <div className="container-max grid gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <p className="font-heading text-xl font-bold">
             Akshay <span className="text-gradient">Computers</span>
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-txt-secondary">
+          <p className="mt-3 text-sm leading-relaxed text-white/70">
             Complete IT Solutions for Your Business
           </p>
         </div>
@@ -27,7 +27,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-txt-secondary transition-all duration-300 hover:text-neon-cyan hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.6)]"
+                  className="text-sm text-white/70 transition-all duration-300 hover:text-orange-peach hover:drop-shadow-[0_0_8px_rgba(255,179,102,0.6)]"
                 >
                   {link.label}
                 </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
                 <li key={service.slug}>
                   <Link
                     href="/services"
-                    className="text-sm text-txt-secondary transition-all duration-300 hover:text-neon-cyan hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.6)]"
+                    className="text-sm text-white/70 transition-all duration-300 hover:text-orange-peach hover:drop-shadow-[0_0_8px_rgba(255,179,102,0.6)]"
                   >
                     {service.short}
                   </Link>
@@ -56,27 +56,27 @@ export default function Footer() {
 
         <div>
           <h2 className="font-heading text-base font-bold">Contact Info</h2>
-          <ul className="mt-4 space-y-3 text-sm text-txt-secondary">
+          <ul className="mt-4 space-y-3 text-sm text-white/70">
             <li>
               <a
                 href={contactInfo.phoneHref}
-                className="inline-flex items-center gap-2 transition-colors hover:text-neon-cyan"
+                className="inline-flex items-center gap-2 transition-colors hover:text-orange-peach"
               >
-                <Phone className="h-4 w-4 shrink-0 text-neon-cyan" aria-hidden="true" />
+                <Phone className="h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
                 {contactInfo.phone}
               </a>
             </li>
             <li>
               <a
                 href={contactInfo.emailHref}
-                className="inline-flex items-center gap-2 transition-colors hover:text-neon-cyan"
+                className="inline-flex items-center gap-2 transition-colors hover:text-orange-peach"
               >
-                <Mail className="h-4 w-4 shrink-0 text-neon-cyan" aria-hidden="true" />
+                <Mail className="h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
                 {contactInfo.email}
               </a>
             </li>
             <li className="flex gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-neon-cyan" aria-hidden="true" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
               <address className="not-italic">
                 {contactInfo.addressLines.map((line) => (
                   <span key={line} className="block">
@@ -86,7 +86,7 @@ export default function Footer() {
               </address>
             </li>
             <li className="flex gap-2">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-neon-cyan" aria-hidden="true" />
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
               <span>
                 {contactInfo.hours}
                 <br />
@@ -98,7 +98,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-max flex flex-col items-center justify-between gap-2 px-4 py-5 text-sm text-txt-muted sm:px-6 md:flex-row lg:px-8">
+        <div className="container-max flex flex-col items-center justify-between gap-2 px-4 py-5 text-sm text-white/50 sm:px-6 md:flex-row lg:px-8">
           <p>© {new Date().getFullYear()} Akshay Computers. All rights reserved.</p>
           <p>
             Privacy Policy <span aria-hidden="true">|</span> Terms of Service

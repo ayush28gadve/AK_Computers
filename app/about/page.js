@@ -21,7 +21,7 @@ export default function AboutPage() {
       <section aria-labelledby="who-we-are">
         <div className="container-max section-padding">
           <Reveal>
-            <div className="mx-auto max-w-3xl space-y-5 text-lg leading-relaxed text-gray-200">
+            <div className="mx-auto max-w-3xl space-y-5 text-lg leading-relaxed text-charcoal-soft">
               <h2 className="text-gradient font-heading text-3xl font-bold tracking-tight">
                 Who We Are
               </h2>
@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-dark-2/40" aria-labelledby="our-expertise">
+      <section className="bg-orange-apricot/20" aria-labelledby="our-expertise">
         <div className="container-max section-padding">
           <SectionHeading
             title="Our Expertise"
@@ -55,12 +55,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {expertiseAreas.map((area, index) => (
               <Reveal key={area.title} delay={(index % 3) * 0.1}>
-                <div className="glass-card flex h-full flex-col gap-3 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neon-cyan/40 hover:shadow-glow-cyan">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-card border border-neon-cyan/30 bg-neon-cyan/10 text-neon-cyan transition-transform duration-300 hover:rotate-12 hover:scale-110">
+                <div className="glass-card flex h-full flex-col gap-3 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-coral/40 hover:shadow-glow-orange">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-card border border-orange-coral/30 bg-orange-coral/10 text-orange-coral transition-transform duration-300 hover:rotate-12 hover:scale-110">
                     <Icon name={area.icon} className="h-6 w-6" />
                   </span>
-                  <h3 className="font-heading text-lg font-bold text-white">{area.title}</h3>
-                  <p className="text-sm text-txt-secondary">{area.description}</p>
+                  <h3 className="font-heading text-lg font-bold text-charcoal-deep">
+                    {area.title}
+                  </h3>
+                  <p className="text-sm text-charcoal-soft">{area.description}</p>
                 </div>
               </Reveal>
             ))}
@@ -81,28 +83,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-dark-2/40" aria-labelledby="mission-vision">
+      <section className="bg-orange-apricot/20" aria-labelledby="mission-vision">
         <div className="container-max section-padding">
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
             <Reveal>
-              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-neon-lime/40 hover:shadow-glow-lime">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-neon-lime/30 bg-neon-lime/10 text-neon-lime">
+              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-orange-golden/50 hover:shadow-glow-gold">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-orange-golden/40 bg-orange-golden/10 text-orange-golden">
                   <Target className="h-6 w-6" aria-hidden="true" />
                 </span>
-                <h3 className="font-heading text-xl font-bold text-white">Our Mission</h3>
-                <p className="text-txt-secondary">
+                <h3 className="font-heading text-xl font-bold text-charcoal-deep">Our Mission</h3>
+                <p className="text-charcoal-soft">
                   To provide affordable, reliable, and expert IT solutions that empower
                   businesses and individuals.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-neon-purple/40 hover:shadow-glow-purple">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-neon-purple/30 bg-neon-purple/10 text-neon-purple">
+              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-orange-burnt/40 hover:shadow-glow-orange">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-orange-burnt/30 bg-orange-burnt/10 text-orange-burnt">
                   <Compass className="h-6 w-6" aria-hidden="true" />
                 </span>
-                <h3 className="font-heading text-xl font-bold text-white">Our Vision</h3>
-                <p className="text-txt-secondary">
+                <h3 className="font-heading text-xl font-bold text-charcoal-deep">Our Vision</h3>
+                <p className="text-charcoal-soft">
                   To be the most trusted IT service provider in the region.
                 </p>
               </div>

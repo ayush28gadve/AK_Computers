@@ -2,11 +2,13 @@
 
 import { useEffect, useRef } from 'react';
 
-const COLORS = ['0, 212, 255', '168, 85, 247', '236, 72, 153', '14, 165, 233'];
+// Warm palette: coral, gold, peach, warm tan
+const DEFAULT_COLORS = ['255, 107, 53', '255, 215, 0', '255, 179, 102', '212, 165, 116'];
 
-// Lightweight canvas particle field — glowing dots drifting slowly.
-// Zero dependencies; pauses entirely when prefers-reduced-motion is set.
-export default function ParticleBackground({ count = 30, className = '' }) {
+// Lightweight canvas particle field — soft glowing dots that drift, spawn and
+// fade, and gently gravitate toward the cursor. Zero dependencies; disabled
+// entirely when prefers-reduced-motion is set.
+export default function ParticleBackground({ count = 40, colors = DEFAULT_COLORS, className = '' }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -17,22 +19,34 @@ export default function ParticleBackground({ count = 30, className = '' }) {
     const ctx = canvas.getContext('2d');
     let frame;
     let particles = [];
+    const mouse = { x: null, y: null };
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
     };
 
+    const onMouseMove = (event) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
+    };
+
+    const onMouseLeave = () => {
+      mouse.x = null;
+      mouse.y = null;
+    };
+
     const spawn = () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: 1 + Math.random() * 3,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      r: 2 + Math.random() * 4,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      color: colors[Math.floor(Math.random() * colors.length)],
       alpha: 0,
       life: 0,
-      maxLife: 400 + Math.random() * 600,
+      maxLife: 500 + Math.random() * 700,
     });
 
     const init = () => {
@@ -48,6 +62,18 @@ export default function ParticleBackground({ count = 30, className = '' }) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
+
+        // gentle attraction toward the cursor within 150px
+        if (mouse.x !== null) {
+          const dx = mouse.x - p.x;
+          const dy = mouse.y - p.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 150 && dist > 1) {
+            p.x += (dx / dist) * 0.35;
+            p.y += (dy / dist) * 0.35;
+          }
+        }
+
         p.x += p.vx;
         p.y += p.vy;
         p.life += 1;
@@ -63,9 +89,9 @@ export default function ParticleBackground({ count = 30, className = '' }) {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${p.color}, ${0.5 * p.alpha})`;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = `rgba(${p.color}, ${0.8 * p.alpha})`;
+        ctx.fillStyle = `rgba(${p.color}, ${0.55 * p.alpha})`;
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = `rgba(${p.color}, ${0.7 * p.alpha})`;
         ctx.fill();
         ctx.shadowBlur = 0;
       }
@@ -75,12 +101,16 @@ export default function ParticleBackground({ count = 30, className = '' }) {
     init();
     frame = requestAnimationFrame(tick);
     window.addEventListener('resize', resize);
+    canvas.parentElement?.addEventListener('mousemove', onMouseMove);
+    canvas.parentElement?.addEventListener('mouseleave', onMouseLeave);
 
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener('resize', resize);
+      canvas.parentElement?.removeEventListener('mousemove', onMouseMove);
+      canvas.parentElement?.removeEventListener('mouseleave', onMouseLeave);
     };
-  }, [count]);
+  }, [count, colors]);
 
   return (
     <canvas
