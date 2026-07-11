@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-bg text-white antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 2px;
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 md:py-20 lg:px-8;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-container;
+  }
+
+  /* Frosted glass card — the base surface for every card on the site */
+  .glass-card {
+    @apply rounded-card-lg border border-white/10 bg-white/5 shadow-glass backdrop-blur-md;
+  }
+
+  /* Animated neon gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  /* Thin gradient divider line */
+  .gradient-line {
+    @apply h-px w-full bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink;
+  }
+}
