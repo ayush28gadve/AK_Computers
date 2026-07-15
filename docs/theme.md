@@ -140,20 +140,18 @@ Both fonts are free on Google Fonts — usable in any design tool.
 
 ---
 
-## 5. The Wordmark (current logo treatment)
+## 5. The Wordmark & Logo (official files)
 
-The site renders the brand name as a two-part wordmark, Space Grotesk Bold:
+**Official wordmark:** the file `public/wordmark.png` (661×142, transparent) —
+"Akshay" in silvery white with an orange "A", "Computers" in the orange
+gradient. ⚠️ Because "kshay" is near-white, the wordmark must **always sit on
+a dark surface** (charcoal `#2B2B2B` or a photo-dark area) — it disappears on
+white/cream. On the website's light header it sits inside a charcoal pill for
+this reason.
 
-```
-Akshay Computers
-──────  ─────────
-charcoal  gradient
-#2B2B2B   #FF6B35 → #FFA500 → #FFD700 (left to right)
-```
-
-- "Akshay" — solid Deep Charcoal `#2B2B2B` (or white `#FFFFFF` on dark/orange backgrounds)
-- "Computers" — the brand text gradient (§3.1)
-- Single space between words, no other separator, both words capitalized.
+If a text fallback is ever needed (plain documents, invoices), set
+"Akshay Computers" in Space Grotesk Bold: "Akshay" in Deep Charcoal `#2B2B2B`
+(white on dark), "Computers" in the brand gradient (§3.1).
 
 **Official logo mark:** the file `public/logo.png` (624×400, transparent
 background) — a bold gradient **"A"** (deep red-orange → coral → golden) cut

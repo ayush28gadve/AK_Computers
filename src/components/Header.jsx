@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 import { Menu, MessageCircle, Phone, X } from 'lucide-react';
 import Logo from './Logo';
+import Wordmark from './Wordmark';
 import { contactInfo, navLinks } from '@/lib/data';
 
 export default function Header() {
@@ -50,14 +51,14 @@ export default function Header() {
       />
 
       <div className="container-max flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        {/* Wordmark has white lettering — the charcoal pill keeps it visible
+            on the light header background */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-heading text-xl font-bold text-charcoal-deep transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]"
+          className="flex items-center gap-2 rounded-card bg-charcoal-deep px-3 py-1.5 shadow-soft-orange transition-all duration-300 hover:scale-105 hover:shadow-glow-orange"
         >
-          <Logo className="h-8 w-auto shrink-0" />
-          <span>
-            Akshay <span className="text-gradient">Computers</span>
-          </span>
+          <Logo className="h-6 w-auto shrink-0" />
+          <Wordmark className="h-5 w-auto shrink-0" />
         </Link>
 
         {/* Desktop nav */}
