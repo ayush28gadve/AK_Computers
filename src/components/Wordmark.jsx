@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-// Official Akshay Computers wordmark (public/wordmark.png, 661x142,
-// transparent). NOTE: the "kshay" letters are silvery-white — always place
-// this on a dark surface (e.g. charcoal) or it disappears into light
-// backgrounds.
-export default function Wordmark({ className = 'h-6 w-auto' }) {
+// Official Akshay Computers wordmark (661x142, transparent), two variants:
+// - /wordmark.png       white "kshay" — for DARK surfaces (footer)
+// - /wordmark-dark.png  charcoal "kshay" — for LIGHT surfaces (header)
+// Pass onLight when placing it on a light/cream background.
+export default function Wordmark({ className = 'h-6 w-auto', onLight = false }) {
   return (
     <Image
-      src="/wordmark.png"
+      src={onLight ? '/wordmark-dark.png' : '/wordmark.png'}
       alt="Akshay Computers"
       width={661}
       height={142}

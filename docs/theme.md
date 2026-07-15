@@ -142,12 +142,16 @@ Both fonts are free on Google Fonts — usable in any design tool.
 
 ## 5. The Wordmark & Logo (official files)
 
-**Official wordmark:** the file `public/wordmark.png` (661×142, transparent) —
-"Akshay" in silvery white with an orange "A", "Computers" in the orange
-gradient. ⚠️ Because "kshay" is near-white, the wordmark must **always sit on
-a dark surface** (charcoal `#2B2B2B` or a photo-dark area) — it disappears on
-white/cream. On the website's light header it sits inside a charcoal pill for
-this reason.
+**Official wordmark — two variants, pick by background:**
+
+| File | "kshay" color | Use on |
+|---|---|---|
+| `public/wordmark.png` | silvery white | **Dark surfaces** (charcoal footer, dark ads) |
+| `public/wordmark-dark.png` | deep charcoal | **Light surfaces** (cream/white header, print) |
+
+Both are 661×142 with transparent backgrounds and identical letterforms —
+orange "A" and gradient "Computers" in each. Never place the white variant on
+light backgrounds (it disappears) or the dark variant on dark ones.
 
 If a text fallback is ever needed (plain documents, invoices), set
 "Akshay Computers" in Space Grotesk Bold: "Akshay" in Deep Charcoal `#2B2B2B`
