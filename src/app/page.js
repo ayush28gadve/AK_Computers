@@ -9,7 +9,7 @@ import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
 import StatCounter from '@/components/StatCounter';
 import TeamCard from '@/components/TeamCard';
-import { Star } from 'lucide-react';
+import { MessageSquareQuote, Star } from 'lucide-react';
 import {
   faqs,
   featuredServiceSlugs,
@@ -166,27 +166,51 @@ export default function HomePage() {
             subtitle="Trusted by homes, offices, schools and businesses"
           />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <Reveal key={testimonial.author} delay={index * 0.1}>
-                <figure className="glass-card flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-warm/50 hover:shadow-glow-gold">
-                  <div
-                    className="flex gap-1 text-gold-bright drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
-                    aria-label="5 out of 5 stars"
-                  >
-                    {Array.from({ length: 5 }).map((_, starIndex) => (
-                      <Star key={starIndex} className="h-5 w-5 fill-current" aria-hidden="true" />
-                    ))}
-                  </div>
-                  <blockquote className="flex-1 text-charcoal-deep">
-                    &ldquo;{testimonial.quote}&rdquo;
-                  </blockquote>
-                  <figcaption className="text-sm">
-                    <span className="font-semibold text-charcoal-deep">{testimonial.author}</span>
-                    <span className="text-charcoal-soft">, {testimonial.org}</span>
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
+            {testimonials.length > 0
+              ? testimonials.map((testimonial, index) => (
+                  <Reveal key={testimonial.author} delay={index * 0.1}>
+                    <figure className="glass-card flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-warm/50 hover:shadow-glow-gold">
+                      <div
+                        className="flex gap-1 text-gold-bright drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
+                        aria-label="5 out of 5 stars"
+                      >
+                        {Array.from({ length: 5 }).map((_, starIndex) => (
+                          <Star
+                            key={starIndex}
+                            className="h-5 w-5 fill-current"
+                            aria-hidden="true"
+                          />
+                        ))}
+                      </div>
+                      <blockquote className="flex-1 text-charcoal-deep">
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </blockquote>
+                      <figcaption className="text-sm">
+                        <span className="font-semibold text-charcoal-deep">
+                          {testimonial.author}
+                        </span>
+                        <span className="text-charcoal-soft">, {testimonial.org}</span>
+                      </figcaption>
+                    </figure>
+                  </Reveal>
+                ))
+              : // Clean placeholder state until real customer testimonials are added
+                Array.from({ length: 3 }).map((_, index) => (
+                  <Reveal key={index} delay={index * 0.1}>
+                    <div className="glass-card flex h-full min-h-[220px] flex-col items-center justify-center gap-3 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold-warm/50 hover:shadow-glow-gold">
+                      <MessageSquareQuote
+                        className="h-9 w-9 text-orange-coral/40"
+                        aria-hidden="true"
+                      />
+                      <p className="font-semibold text-charcoal-soft">
+                        Customer testimonial coming soon
+                      </p>
+                      <p className="text-sm text-gray-muted">
+                        Real reviews from our happy customers will appear here.
+                      </p>
+                    </div>
+                  </Reveal>
+                ))}
           </div>
         </div>
       </section>

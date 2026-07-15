@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from 'lucide-react';
+import { Mail, MessageCircle, Phone } from 'lucide-react';
 import CTAButton from './CTAButton';
 import ParticleBackground from './ParticleBackground';
 import Reveal from './Reveal';
@@ -30,6 +30,9 @@ export default function CTASection({
             </CTAButton>
             <CTAButton href="/contact" variant="secondary">
               Contact Form
+            </CTAButton>
+            <CTAButton href={contactInfo.emailHref} variant="outline">
+              <Mail className="h-5 w-5" aria-hidden="true" /> Email Us
             </CTAButton>
           </div>
         </Reveal>

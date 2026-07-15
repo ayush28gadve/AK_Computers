@@ -3,8 +3,8 @@ export const contactInfo = {
   phoneHref: 'tel:+917972082364',
   whatsappHref:
     "https://wa.me/917972082364?text=Hi%20Akshay%20Computers!%20I'm%20interested%20in%20your%20services.",
-  email: 'ak.gadve@gmail.com',
-  emailHref: 'mailto:ak.gadve@gmail.com',
+  email: 'akggadve@gmail.com',
+  emailHref: 'mailto:akggadve@gmail.com',
   addressLines: [
     '5/5/67/1, Anugrah,',
     'New Osmanpura, Osmanpura,',
@@ -24,8 +24,8 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: 500, suffix: '+', label: 'Installations', icon: 'CheckCircle' },
-  { value: 15, suffix: '+', label: 'Years Service', icon: 'Calendar' },
+  { value: 1000, suffix: '+', label: 'Installations', icon: 'CheckCircle' },
+  { value: 35, suffix: '+', label: 'Years Service', icon: 'Calendar' },
   { value: 24, suffix: '/7', label: 'Support Available', icon: 'Phone' },
   { value: 100, suffix: '%', label: 'Customer Satisfaction', icon: 'Star' },
 ];
@@ -148,7 +148,7 @@ export const team = [
       'Hardware Repair & Troubleshooting',
       'Client Consultation & Design',
     ],
-    bio: 'With 15+ years of experience, Prasad leads our technical team in delivering top-quality IT solutions for businesses of all sizes.',
+    bio: 'With 35+ years of experience, Prasad leads our technical team in delivering top-quality IT solutions for businesses of all sizes.',
   },
   {
     slug: 'kailash-gadve',
@@ -169,7 +169,7 @@ export const whyChooseUs = [
   {
     icon: 'Award',
     title: 'Expert Team',
-    description: 'Certified professionals with 15+ years experience',
+    description: 'Certified professionals with 35+ years experience',
   },
   {
     icon: 'Zap',
@@ -195,24 +195,9 @@ export const processSteps = [
   { icon: 'Shield', title: 'Ongoing Support', description: 'We stay available for maintenance and emergencies.' },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      'Akshay Computers installed our CCTV system flawlessly. Professional team, great service!',
-    author: 'School Principal',
-    org: 'CSN School',
-  },
-  {
-    quote: 'Fast and reliable repair service. They fixed my laptop within 24 hours!',
-    author: 'Office Manager',
-    org: 'Tech Solutions Inc.',
-  },
-  {
-    quote: 'Best networking setup we could ask for. Highly recommended!',
-    author: 'Business Owner',
-    org: 'Local Retail Store',
-  },
-];
+// Real customer testimonials go here as { quote, author, org }.
+// While this array is empty, the homepage shows clean placeholder cards.
+export const testimonials = [];
 
 export const faqs = [
   {

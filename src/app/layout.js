@@ -37,7 +37,7 @@ const businessSchema = {
   description:
     'CCTV installation, laptop and desktop repair, networking solutions, office IT setup, AMC contracts and technical support.',
   telephone: '+917972082364',
-  email: 'ak.gadve@gmail.com',
+  email: 'akggadve@gmail.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '5/5/67/1, Anugrah, New Osmanpura, Osmanpura',

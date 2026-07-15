@@ -65,7 +65,7 @@ Until then the form shows a "not connected yet" notice and won't submit.
 
 ## Pending real content (placeholders in use)
 
-- Founding year ("15+ years" used as stand-in)
+- Founding year ("35+ years" used as stand-in)
 - Team photos (initials avatars used) — add an `image` field per member in `src/lib/data.js` and update `src/components/TeamCard.jsx`
 - Real customer testimonials
 - Formspree form ID (see above)

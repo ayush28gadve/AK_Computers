@@ -9,7 +9,7 @@ import { team, teamValues } from '@/lib/data';
 export const metadata = {
   title: 'Meet Our Expert Team',
   description:
-    'Meet Prasad and Kailash, certified IT professionals with 15+ years of experience in CCTV, repairs, and IT solutions.',
+    'Meet Prasad and Kailash, certified IT professionals with 35+ years of experience in CCTV, repairs, and IT solutions.',
 };
 
 export default function TeamPage() {

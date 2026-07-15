@@ -57,7 +57,7 @@ export default function Hero() {
           >
             Complete IT Solutions for Your Business —{' '}
             <span className="text-gradient drop-shadow-[0_0_15px_rgba(255,107,53,0.25)]">
-              Trusted for 15+ Years
+              Trusted for 35+ Years
             </span>
           </motion.h1>
           <motion.p

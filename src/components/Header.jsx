@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 import { Menu, MessageCircle, Phone, X } from 'lucide-react';
+import Logo from './Logo';
 import { contactInfo, navLinks } from '@/lib/data';
 
 export default function Header() {
@@ -51,9 +52,12 @@ export default function Header() {
       <div className="container-max flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-heading text-xl font-bold text-charcoal-deep transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]"
+          className="flex items-center gap-2.5 font-heading text-xl font-bold text-charcoal-deep transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]"
         >
-          Akshay <span className="text-gradient">Computers</span>
+          <Logo className="h-9 w-auto shrink-0" />
+          <span>
+            Akshay <span className="text-gradient">Computers</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

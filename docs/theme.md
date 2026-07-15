@@ -17,7 +17,7 @@
 | **Brand name** | Akshay Computers |
 | **Tagline** | Complete IT Solutions for Your Business |
 | **Positioning line** | CCTV, Repairs, Networking & Security — One-Stop IT Service Provider |
-| **Trust line** | Trusted for 15+ Years |
+| **Trust line** | Trusted for 35+ Years |
 | **Personality** | Warm, premium, energetic, trustworthy, modern |
 | **Look & feel** | Warm luxury light theme — coral orange + cream + gold, soft glows, glassmorphism, flowing gradients |
 
@@ -155,10 +155,12 @@ charcoal  gradient
 - "Computers" — the brand text gradient (§3.1)
 - Single space between words, no other separator, both words capitalized.
 
-**For the official logo:** keep this two-tone identity (solid + orange-gold gradient).
-A matching icon/monogram suggestion consistent with the site: the initials **AC**
-in Space Grotesk Bold inside a circle with the conic gradient ring (§3.6) on a
-cream `#FFFEF7` field — this mirrors the website's avatar rings.
+**Official logo mark:** a bold gradient **"A"** (deep red-orange `#E8442E` →
+coral `#FF6B35` → golden `#FFA500`, bottom-left to top-right) cut by a rising
+**swoosh** (orange `#FF8A3D` → gold `#FFC837`, left to right) that sweeps
+through both legs. The website uses an SVG version of this mark
+(`src/components/Logo.jsx`, favicon `src/app/icon.svg`) next to the two-tone
+wordmark above.
 
 ---
 
@@ -259,11 +261,11 @@ Feel: **slow, smooth, luxurious.** Nothing snaps; everything breathes.
 |---|---|
 | **Phone / WhatsApp** | +91 7972082364 |
 | **WhatsApp link** | https://wa.me/917972082364 |
-| **Email** | ak.gadve@gmail.com |
+| **Email** | akggadve@gmail.com |
 | **Address** | 5/5/67/1, Anugrah, New Osmanpura, Osmanpura, Chhatrapati Sambhajinagar (Aurangabad), Maharashtra – 431005 |
 | **Hours** | Mon–Sat, 10:00 AM – 8:00 PM (Sunday closed) |
 | **Services (short list)** | CCTV Systems · Laptop Repair · Desktop Repair · Networking · Office IT Setup · AMC · Intercom · Accessories · Monitors · Tech Support |
-| **Trust stats** | 500+ Installations · 15+ Years · 24/7 Support · 100% Satisfaction |
+| **Trust stats** | 1000+ Installations · 35+ Years · 24/7 Support · 100% Satisfaction |
 
 > ⚠️ Phone and email are currently marked as *testing* values — confirm before
 > printing anything physical.

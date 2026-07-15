@@ -10,7 +10,7 @@ import { expertiseAreas, stats } from '@/lib/data';
 export const metadata = {
   title: 'About Akshay Computers - Your Trusted IT Partner',
   description:
-    'Akshay Computers is a leading IT service provider in Chhatrapati Sambhajinagar. 500+ installations, 24/7 support.',
+    'Akshay Computers is a leading IT service provider in Chhatrapati Sambhajinagar. 1000+ installations, 24/7 support.',
 };
 
 export default function AboutPage() {
@@ -28,7 +28,7 @@ export default function AboutPage() {
               <p>
                 Akshay Computers is a leading IT service provider in Chhatrapati Sambhajinagar,
                 dedicated to delivering premium technology solutions to businesses,
-                organizations, and individuals. With over 15 years of industry experience, we
+                organizations, and individuals. With over 35 years of industry experience, we
                 specialize in CCTV systems, computer repairs, networking solutions, and
                 comprehensive IT infrastructure setup.
               </p>

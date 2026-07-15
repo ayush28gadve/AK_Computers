@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import Logo from './Logo';
 import { contactInfo, navLinks, services } from '@/lib/data';
 
 const footerServices = ['cctv', 'laptop', 'networking', 'office-setup', 'amc', 'support'];
@@ -12,9 +13,12 @@ export default function Footer() {
 
       <div className="container-max grid gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
-          <p className="font-heading text-xl font-bold">
-            Akshay <span className="text-gradient">Computers</span>
-          </p>
+          <div className="flex items-center gap-2.5">
+            <Logo className="h-8 w-auto shrink-0" />
+            <p className="font-heading text-xl font-bold">
+              Akshay <span className="text-gradient">Computers</span>
+            </p>
+          </div>
           <p className="mt-3 text-sm leading-relaxed text-white/70">
             Complete IT Solutions for Your Business
           </p>
