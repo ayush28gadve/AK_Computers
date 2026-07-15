@@ -155,12 +155,13 @@ charcoal  gradient
 - "Computers" — the brand text gradient (§3.1)
 - Single space between words, no other separator, both words capitalized.
 
-**Official logo mark:** a bold gradient **"A"** (deep red-orange `#E8442E` →
-coral `#FF6B35` → golden `#FFA500`, bottom-left to top-right) cut by a rising
-**swoosh** (orange `#FF8A3D` → gold `#FFC837`, left to right) that sweeps
-through both legs. The website uses an SVG version of this mark
-(`src/components/Logo.jsx`, favicon `src/app/icon.svg`) next to the two-tone
-wordmark above.
+**Official logo mark:** the file `public/logo.png` (624×400, transparent
+background) — a bold gradient **"A"** (deep red-orange → coral → golden) cut
+by a rising orange-gold **swoosh** that sweeps through both legs. This exact
+file is the single source of truth for the mark: the website renders it via
+`src/components/Logo.jsx` (small, next to the wordmark) and the favicon
+`src/app/icon.png` is generated from it. Use `public/logo.png` for all
+external brand material.
 
 ---
 

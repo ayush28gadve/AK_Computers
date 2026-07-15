@@ -54,7 +54,7 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2.5 font-heading text-xl font-bold text-charcoal-deep transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]"
         >
-          <Logo className="h-9 w-auto shrink-0" />
+          <Logo className="h-8 w-auto shrink-0" />
           <span>
             Akshay <span className="text-gradient">Computers</span>
           </span>
