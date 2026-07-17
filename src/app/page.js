@@ -4,6 +4,7 @@ import CTAButton from '@/components/CTAButton';
 import CTASection from '@/components/CTASection';
 import Hero from '@/components/Hero';
 import Icon from '@/components/Icon';
+import ProductMarquee from '@/components/ProductMarquee';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
@@ -20,7 +21,7 @@ import {
   testimonials,
   whyChooseUs,
 } from '@/lib/data';
-import { heroImageExists } from '@/lib/products';
+import { getDealProducts, heroImageExists } from '@/lib/products';
 
 const featuredServices = featuredServiceSlugs.map((slug) =>
   services.find((service) => service.slug === slug)
@@ -30,6 +31,9 @@ export default function HomePage() {
   return (
     <>
       <Hero hasShowcase={heroImageExists()} />
+
+      {/* Products we deal in — infinite dual-direction showcase */}
+      <ProductMarquee products={getDealProducts()} />
 
       {/* Trust indicators */}
       <section className="bg-blush/20" aria-label="Company statistics">
