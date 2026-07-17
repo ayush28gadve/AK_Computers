@@ -45,16 +45,20 @@ export default function Hero({ hasShowcase = false }) {
       {/* Layer 4: floating particles (mouse-reactive) */}
       <ParticleBackground count={hasShowcase ? 40 : 80} />
 
-      <div className="container-max relative px-4 sm:px-6 lg:px-8">
+      <div className="container-max relative px-5 sm:px-8 lg:px-10">
         <div
           className={
             hasShowcase
-              ? 'grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8'
+              ? 'grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_1.1fr] lg:gap-12 xl:gap-16'
               : ''
           }
         >
           <motion.div
-            className={hasShowcase ? '' : 'max-w-3xl'}
+            className={
+              hasShowcase
+                ? 'mx-auto max-w-xl text-center lg:mx-0 lg:max-w-none lg:text-left'
+                : 'max-w-3xl'
+            }
             variants={reduceMotion ? undefined : staggerContainer}
             initial={reduceMotion ? false : 'hidden'}
             animate={reduceMotion ? false : 'visible'}
@@ -77,7 +81,9 @@ export default function Hero({ hasShowcase = false }) {
             </motion.p>
             <motion.div
               variants={reduceMotion ? undefined : fadeInUp}
-              className="mt-8 flex flex-col gap-4 sm:flex-row"
+              className={`mt-8 flex flex-col gap-4 sm:flex-row ${
+                hasShowcase ? 'sm:justify-center lg:justify-start' : ''
+              }`}
             >
               <CTAButton href={contactInfo.whatsappHref} variant="whatsapp">
                 <MessageCircle className="h-5 w-5" aria-hidden="true" /> Chat on WhatsApp
@@ -89,7 +95,9 @@ export default function Hero({ hasShowcase = false }) {
           </motion.div>
 
           {hasShowcase && (
-            <div className="mt-4 lg:mt-0">
+            // Sits slightly low on desktop so the composition visually rests
+            // on an invisible surface aligned with the text block's baseline
+            <div className="mt-12 lg:mt-0 lg:translate-y-5">
               <ProductShowcase />
             </div>
           )}
