@@ -1,7 +1,16 @@
 import { CheckCircle, Mail, Phone } from 'lucide-react';
-import { contactInfo } from '@/lib/data';
 
-export default function TeamCard({ name, initials, role, expertise, bio }) {
+export default function TeamCard({
+  name,
+  initials,
+  role,
+  expertise,
+  bio,
+  phone,
+  phoneHref,
+  email,
+  emailHref,
+}) {
   return (
     <div className="glass-card group flex h-full flex-col gap-5 p-8 transition-all duration-300 ease-bounce hover:border-red-dark/50 hover:shadow-glow-maroon-lg">
       {/* Rotating orange→gold gradient ring around the avatar */}
@@ -30,18 +39,22 @@ export default function TeamCard({ name, initials, role, expertise, bio }) {
         ))}
       </ul>
       <div className="mt-auto flex flex-col gap-2 border-t border-maroon/15 pt-4 text-sm">
-        <a
-          href={contactInfo.phoneHref}
-          className="inline-flex min-h-[44px] items-center gap-2 text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
-        >
-          <Phone className="h-4 w-4" aria-hidden="true" /> {contactInfo.phone}
-        </a>
-        <a
-          href={contactInfo.emailHref}
-          className="inline-flex min-h-[44px] items-center gap-2 text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
-        >
-          <Mail className="h-4 w-4" aria-hidden="true" /> {contactInfo.email}
-        </a>
+        {phone && (
+          <a
+            href={phoneHref}
+            className="inline-flex min-h-[44px] items-center gap-2 text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" /> {phone}
+          </a>
+        )}
+        {email && (
+          <a
+            href={emailHref}
+            className="inline-flex min-h-[44px] items-center gap-2 text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
+          >
+            <Mail className="h-4 w-4" aria-hidden="true" /> {email}
+          </a>
+        )}
       </div>
     </div>
   );

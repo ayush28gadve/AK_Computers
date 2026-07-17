@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: 'Akshay Computers - Complete IT Solutions',
     description:
-      'Expert CCTV, repairs, networking & security solutions. Call +91 7972082364',
+      'Expert CCTV, repairs, networking & security solutions. Call +91 9371619080',
     type: 'website',
     locale: 'en_IN',
     siteName: 'Akshay Computers',
@@ -36,8 +36,8 @@ const businessSchema = {
   name: 'Akshay Computers',
   description:
     'CCTV installation, laptop and desktop repair, networking solutions, office IT setup, AMC contracts and technical support.',
-  telephone: '+917972082364',
-  email: 'akggadve@gmail.com',
+  telephone: '+919371619080',
+  email: 'akshaycomputers@gmail.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '5/5/67/1, Anugrah, New Osmanpura, Osmanpura',

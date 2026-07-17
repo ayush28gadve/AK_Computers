@@ -234,15 +234,16 @@ Restrained and smooth — motion supports elegance, it never shouts.
 
 | | |
 |---|---|
-| **Phone / WhatsApp** | +91 7972082364 |
-| **WhatsApp link** | https://wa.me/917972082364 |
-| **Email** | akggadve@gmail.com |
+| **Phone / WhatsApp** | +91 9371619080 |
+| **WhatsApp link** | https://wa.me/919371619080 |
+| **Email** | akshaycomputers@gmail.com |
 | **Address** | 5/5/67/1, Anugrah, New Osmanpura, Osmanpura, Chhatrapati Sambhajinagar (Aurangabad), Maharashtra – 431005 |
 | **Hours** | Mon–Sat, 10:00 AM – 8:00 PM (Sunday closed) |
 | **Services (short list)** | CCTV Systems · Laptop Repair · Desktop Repair · Networking · Office IT Setup · AMC · Intercom · Accessories · Monitors · Tech Support |
 | **Trust stats** | 1000+ Installations · 35+ Years · 24/7 Support · 100% Satisfaction |
 
-> ⚠️ Phone and email are currently *testing* values — confirm before printing.
+> Team contacts: Prasad Nilangekar +91 9595996295 · Kailash Gadve
+> +91 9326201923, gadve1234@gmail.com
 
 ---
 

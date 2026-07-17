@@ -1,10 +1,10 @@
 export const contactInfo = {
-  phone: '+91 7972082364',
-  phoneHref: 'tel:+917972082364',
+  phone: '+91 9371619080',
+  phoneHref: 'tel:+919371619080',
   whatsappHref:
-    "https://wa.me/917972082364?text=Hi%20Akshay%20Computers!%20I'm%20interested%20in%20your%20services.",
-  email: 'akggadve@gmail.com',
-  emailHref: 'mailto:akggadve@gmail.com',
+    "https://wa.me/919371619080?text=Hi%20Akshay%20Computers!%20I'm%20interested%20in%20your%20services.",
+  email: 'akshaycomputers@gmail.com',
+  emailHref: 'mailto:akshaycomputers@gmail.com',
   addressLines: [
     '5/5/67/1, Anugrah,',
     'New Osmanpura, Osmanpura,',
@@ -141,6 +141,10 @@ export const team = [
     slug: 'prasad-nilangekar',
     name: 'Prasad Nilangekar',
     initials: 'PN',
+    phone: '+91 9595996295',
+    phoneHref: 'tel:+919595996295',
+    email: null,
+    emailHref: null,
     role: 'Business Operations & Client Relations Manager',
     expertise: [
       'Client Relationship Management',
@@ -156,6 +160,10 @@ export const team = [
     slug: 'kailash-gadve',
     name: 'Kailash Gadve',
     initials: 'KG',
+    phone: '+91 9326201923',
+    phoneHref: 'tel:+919326201923',
+    email: 'gadve1234@gmail.com',
+    emailHref: 'mailto:gadve1234@gmail.com',
     role: 'IT Support & Field Service Engineer',
     expertise: [
       'On-Site Technical Support',
