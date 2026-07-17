@@ -276,10 +276,10 @@ export const dealProducts = [
   { name: 'Monitor', category: 'Computer Hardware', icon: 'MonitorCheck', image: 'monitor.png' },
   { name: 'Printer', category: 'Computer Hardware', icon: 'Printer', image: 'printer.png' },
   { name: 'Keyboard & Mouse', category: 'Computer Hardware', icon: 'Keyboard', image: 'keyboard-mouse.png' },
+  { name: 'Biometric Attendance System', category: 'Office & Business Solutions', icon: 'Fingerprint', image: 'biometric.png' },
+  { name: 'Projector', category: 'Office & Business Solutions', icon: 'Projector', image: 'projector.png' },
   { name: 'Wi-Fi Router', category: 'Networking', icon: 'Router', image: 'router.png' },
   { name: 'Network Switch', category: 'Networking', icon: 'Network', image: 'network-switch.png' },
-  { name: 'Access Point', category: 'Networking', icon: 'Wifi', image: 'access-point.png' },
-  { name: 'Networking Accessories', category: 'Networking', icon: 'Cable', image: 'networking-accessories.png' },
 ];
 
 export const serviceFormOptions = [
