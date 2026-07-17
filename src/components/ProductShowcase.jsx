@@ -25,7 +25,7 @@ export default function ProductShowcase() {
 
       {/* Gentle endless float (≈4px) */}
       <motion.div
-        className="relative aspect-[4/3] w-full"
+        className="relative aspect-[3/2] w-full"
         animate={reduceMotion ? undefined : { y: [0, -4, 0] }}
         transition={
           reduceMotion
