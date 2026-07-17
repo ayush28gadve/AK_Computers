@@ -30,7 +30,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-white/70 transition-all duration-300 hover:text-orange-peach hover:drop-shadow-[0_0_8px_rgba(255,179,102,0.6)]"
+                  className="text-sm text-white/70 transition-all duration-300 hover:text-rose-light hover:drop-shadow-[0_1px_2px_rgba(232,180,173,0.5)]"
                 >
                   {link.label}
                 </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li key={service.slug}>
                   <Link
                     href="/services"
-                    className="text-sm text-white/70 transition-all duration-300 hover:text-orange-peach hover:drop-shadow-[0_0_8px_rgba(255,179,102,0.6)]"
+                    className="text-sm text-white/70 transition-all duration-300 hover:text-rose-light hover:drop-shadow-[0_1px_2px_rgba(232,180,173,0.5)]"
                   >
                     {service.short}
                   </Link>
@@ -63,23 +63,23 @@ export default function Footer() {
             <li>
               <a
                 href={contactInfo.phoneHref}
-                className="inline-flex items-center gap-2 transition-colors hover:text-orange-peach"
+                className="inline-flex items-center gap-2 transition-colors hover:text-rose-light"
               >
-                <Phone className="h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
+                <Phone className="h-4 w-4 shrink-0 text-rose-light" aria-hidden="true" />
                 {contactInfo.phone}
               </a>
             </li>
             <li>
               <a
                 href={contactInfo.emailHref}
-                className="inline-flex items-center gap-2 transition-colors hover:text-orange-peach"
+                className="inline-flex items-center gap-2 transition-colors hover:text-rose-light"
               >
-                <Mail className="h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
+                <Mail className="h-4 w-4 shrink-0 text-rose-light" aria-hidden="true" />
                 {contactInfo.email}
               </a>
             </li>
             <li className="flex gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-rose-light" aria-hidden="true" />
               <address className="not-italic">
                 {contactInfo.addressLines.map((line) => (
                   <span key={line} className="block">
@@ -89,7 +89,7 @@ export default function Footer() {
               </address>
             </li>
             <li className="flex gap-2">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-orange-peach" aria-hidden="true" />
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-rose-light" aria-hidden="true" />
               <span>
                 {contactInfo.hours}
                 <br />

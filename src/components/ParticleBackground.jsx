@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 
-// Warm palette: coral, gold, peach, warm tan
-const DEFAULT_COLORS = ['255, 107, 53', '255, 215, 0', '255, 179, 102', '212, 165, 116'];
+// Brand palette: maroon, crimson, soft rose, warm gold
+const DEFAULT_COLORS = ['139, 30, 30', '192, 57, 43', '232, 180, 173', '212, 165, 116'];
 
 // Lightweight canvas particle field — soft glowing dots that drift, spawn and
 // fade, and gently gravitate toward the cursor. Zero dependencies; disabled

@@ -31,7 +31,7 @@ export default function HomePage() {
       <Hero />
 
       {/* Trust indicators */}
-      <section className="bg-orange-apricot/20" aria-label="Company statistics">
+      <section className="bg-blush/20" aria-label="Company statistics">
         <div className="container-max section-padding">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat, index) => (
@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       {/* Why choose us */}
-      <section className="bg-orange-apricot/20" aria-labelledby="why-choose-us">
+      <section className="bg-blush/20" aria-labelledby="why-choose-us">
         <div className="container-max section-padding">
           <SectionHeading
             title="Why Choose Akshay Computers"
@@ -75,8 +75,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyChooseUs.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.1}>
-                <div className="glass-card flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-gold-bright/60 hover:shadow-glow-gold">
-                  <span className="animate-float flex h-14 w-14 items-center justify-center rounded-full border border-orange-golden/40 bg-orange-golden/10 text-orange-golden">
+                <div className="glass-card flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-crimson/60 hover:shadow-glow-crimson">
+                  <span className="animate-float flex h-14 w-14 items-center justify-center rounded-full border border-red-dark/40 bg-red-dark/10 text-red-dark">
                     <Icon name={item.icon} className="h-7 w-7" />
                   </span>
                   <h3 className="font-heading text-lg font-bold text-charcoal-deep">
@@ -97,11 +97,11 @@ export default function HomePage() {
           <ol className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.1}>
-                <li className="glass-card relative flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-orange-burnt/40 hover:shadow-glow-orange">
-                  <span className="absolute -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-orange-coral to-gold-bright font-heading text-sm font-bold text-white shadow-glow-orange">
+                <li className="glass-card relative flex h-full flex-col items-center gap-3 p-6 text-center transition-all duration-300 hover:border-crimson/40 hover:shadow-glow-maroon">
+                  <span className="absolute -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-maroon to-crimson font-heading text-sm font-bold text-white shadow-glow-maroon">
                     {index + 1}
                   </span>
-                  <span className="mt-2 flex h-12 w-12 items-center justify-center rounded-card border border-orange-burnt/30 bg-orange-burnt/10 text-orange-burnt transition-transform duration-300 hover:rotate-12 hover:scale-110">
+                  <span className="mt-2 flex h-12 w-12 items-center justify-center rounded-card border border-crimson/30 bg-crimson/10 text-crimson transition-transform duration-300 hover:rotate-12 hover:scale-110">
                     <Icon name={step.icon} className="h-6 w-6" />
                   </span>
                   <h3 className="font-heading text-lg font-bold text-charcoal-deep">
@@ -116,7 +116,7 @@ export default function HomePage() {
       </section>
 
       {/* Team preview */}
-      <section className="bg-orange-apricot/20" aria-labelledby="team-preview">
+      <section className="bg-blush/20" aria-labelledby="team-preview">
         <div className="container-max section-padding">
           <SectionHeading
             title="Meet Our Expert Team"
@@ -159,7 +159,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-orange-apricot/20" aria-labelledby="testimonials">
+      <section className="bg-blush/20" aria-labelledby="testimonials">
         <div className="container-max section-padding">
           <SectionHeading
             title="What Our Customers Say"
@@ -169,9 +169,9 @@ export default function HomePage() {
             {testimonials.length > 0
               ? testimonials.map((testimonial, index) => (
                   <Reveal key={testimonial.author} delay={index * 0.1}>
-                    <figure className="glass-card flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-warm/50 hover:shadow-glow-gold">
+                    <figure className="glass-card flex h-full flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-crimson/50 hover:shadow-glow-crimson">
                       <div
-                        className="flex gap-1 text-gold-bright drop-shadow-[0_0_6px_rgba(255,215,0,0.6)]"
+                        className="flex gap-1 text-crimson drop-shadow-[0_1px_2px_rgba(192,57,43,0.4)]"
                         aria-label="5 out of 5 stars"
                       >
                         {Array.from({ length: 5 }).map((_, starIndex) => (
@@ -197,9 +197,9 @@ export default function HomePage() {
               : // Clean placeholder state until real customer testimonials are added
                 Array.from({ length: 3 }).map((_, index) => (
                   <Reveal key={index} delay={index * 0.1}>
-                    <div className="glass-card flex h-full min-h-[220px] flex-col items-center justify-center gap-3 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold-warm/50 hover:shadow-glow-gold">
+                    <div className="glass-card flex h-full min-h-[220px] flex-col items-center justify-center gap-3 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-crimson/50 hover:shadow-glow-crimson">
                       <MessageSquareQuote
-                        className="h-9 w-9 text-orange-coral/40"
+                        className="h-9 w-9 text-maroon/40"
                         aria-hidden="true"
                       />
                       <p className="font-semibold text-charcoal-soft">
@@ -234,7 +234,7 @@ export default function HomePage() {
             Still have questions?{' '}
             <Link
               href="/contact"
-              className="font-semibold text-orange-coral hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.6)]"
+              className="font-semibold text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
             >
               Get in touch
             </Link>

@@ -22,16 +22,16 @@ export default function Hero() {
       {/* Layer 2: morphing gradient blobs */}
       <div
         aria-hidden="true"
-        className="animate-blob pointer-events-none absolute -right-24 -top-24 h-96 w-96 bg-gradient-to-br from-orange-coral/25 to-gold-bright/20 blur-3xl"
+        className="animate-blob pointer-events-none absolute -right-24 -top-24 h-96 w-96 bg-gradient-to-br from-maroon/25 to-crimson/20 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="animate-blob pointer-events-none absolute -bottom-32 left-1/3 h-96 w-96 bg-gradient-to-tr from-orange-peach/25 to-orange-apricot/20 blur-3xl"
+        className="animate-blob pointer-events-none absolute -bottom-32 left-1/3 h-96 w-96 bg-gradient-to-tr from-rose-light/25 to-blush/20 blur-3xl"
         style={{ animationDelay: '-4s' }}
       />
       <div
         aria-hidden="true"
-        className="animate-blob pointer-events-none absolute -left-20 top-1/4 h-72 w-72 bg-gradient-to-br from-gold-warm/20 to-orange-coral/15 blur-3xl"
+        className="animate-blob pointer-events-none absolute -left-20 top-1/4 h-72 w-72 bg-gradient-to-br from-crimson/20 to-maroon/15 blur-3xl"
         style={{ animationDelay: '-2s' }}
       />
 
@@ -56,7 +56,7 @@ export default function Hero() {
             className="font-heading text-3xl font-bold leading-tight tracking-tight text-charcoal-deep sm:text-4xl md:text-5xl lg:text-6xl"
           >
             Complete IT Solutions for Your Business —{' '}
-            <span className="text-gradient drop-shadow-[0_0_15px_rgba(255,107,53,0.25)]">
+            <span className="text-gradient drop-shadow-[0_2px_4px_rgba(139,30,30,0.2)]">
               Trusted for 35+ Years
             </span>
           </motion.h1>

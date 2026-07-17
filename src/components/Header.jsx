@@ -29,9 +29,9 @@ export default function Header() {
   }, [pathname]);
 
   const linkClasses = (href) =>
-    `relative pb-1 text-base font-semibold transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-orange-coral after:to-gold-bright after:transition-all after:duration-300 hover:text-orange-coral hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.4)] ${
+    `relative pb-1 text-base font-semibold transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-gradient-to-r after:from-maroon after:to-crimson after:transition-all after:duration-300 hover:text-maroon hover:drop-shadow-[0_0_8px_rgba(139,30,30,0.4)] ${
       pathname === href
-        ? 'text-orange-coral after:w-full'
+        ? 'text-maroon after:w-full'
         : 'text-charcoal-deep after:w-0 hover:after:w-full'
     }`;
 
@@ -39,21 +39,21 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
         scrolled
-          ? 'border-orange-coral/15 bg-white/95 shadow-medium-orange backdrop-blur-md'
+          ? 'border-maroon/15 bg-white/95 shadow-medium-brand backdrop-blur-md'
           : 'border-transparent bg-white/75 backdrop-blur-sm'
       }`}
     >
       {/* Scroll progress bar */}
       <motion.div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-0.5 origin-left bg-gradient-to-r from-orange-coral via-gold-bright to-orange-coral"
+        className="absolute inset-x-0 top-0 h-0.5 origin-left bg-gradient-to-r from-maroon via-crimson to-maroon"
         style={{ scaleX: progress }}
       />
 
       <div className="container-max flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2.5 transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(255,107,53,0.4)]"
+          className="flex items-center gap-2.5 transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(139,30,30,0.4)]"
         >
           <Logo className="h-8 w-auto shrink-0" />
           <Wordmark onLight className="h-6 w-auto shrink-0" />
@@ -75,7 +75,7 @@ export default function Header() {
             href={contactInfo.whatsappHref}
             target="_blank"
             rel="noreferrer"
-            className="animate-glow-pulse inline-flex min-h-[44px] items-center gap-2 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-5 py-2.5 font-bold text-white transition-all duration-300 ease-bounce hover:-translate-y-0.5 hover:scale-105"
+            className="animate-glow-pulse inline-flex min-h-[44px] items-center gap-2 rounded-card bg-gradient-to-r from-maroon to-red-dark px-5 py-2.5 font-bold text-white transition-all duration-300 ease-bounce hover:-translate-y-0.5 hover:scale-105"
           >
             <MessageCircle className="h-5 w-5" aria-hidden="true" />
             Chat on WhatsApp
@@ -85,7 +85,7 @@ export default function Header() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-card text-charcoal-deep transition-colors hover:text-orange-coral lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-card text-charcoal-deep transition-colors hover:text-maroon lg:hidden"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
@@ -108,7 +108,7 @@ export default function Header() {
             />
             <motion.nav
               aria-label="Mobile navigation"
-              className="fixed left-0 top-0 z-50 flex h-screen w-[min(80vw,300px)] flex-col gap-2 border-r border-orange-coral/15 bg-cream/95 p-6 pt-20 backdrop-blur-md lg:hidden"
+              className="fixed left-0 top-0 z-50 flex h-screen w-[min(80vw,300px)] flex-col gap-2 border-r border-maroon/15 bg-warm-white/95 p-6 pt-20 backdrop-blur-md lg:hidden"
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
@@ -116,7 +116,7 @@ export default function Header() {
             >
               <button
                 type="button"
-                className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center text-charcoal-deep transition-transform duration-300 hover:rotate-90 hover:text-orange-coral"
+                className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center text-charcoal-deep transition-transform duration-300 hover:rotate-90 hover:text-maroon"
                 aria-label="Close menu"
                 onClick={() => setMenuOpen(false)}
               >
@@ -133,26 +133,26 @@ export default function Header() {
                     href={link.href}
                     className={`block rounded-card px-4 py-3 text-base font-semibold transition-colors ${
                       pathname === link.href
-                        ? 'bg-orange-coral/10 text-orange-coral'
-                        : 'text-charcoal-deep hover:bg-orange-apricot/20 hover:text-orange-coral'
+                        ? 'bg-maroon/10 text-maroon'
+                        : 'text-charcoal-deep hover:bg-blush/20 hover:text-maroon'
                     }`}
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-              <div className="mt-4 flex flex-col gap-3 border-t border-orange-coral/15 pt-4">
+              <div className="mt-4 flex flex-col gap-3 border-t border-maroon/15 pt-4">
                 <a
                   href={contactInfo.whatsappHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-4 py-3 font-bold text-white shadow-glow-orange"
+                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-maroon to-red-dark px-4 py-3 font-bold text-white shadow-glow-maroon"
                 >
                   <MessageCircle className="h-5 w-5" aria-hidden="true" /> WhatsApp
                 </a>
                 <a
                   href={contactInfo.phoneHref}
-                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-gradient-to-r from-orange-golden to-gold-bright px-4 py-3 font-bold text-charcoal-deep shadow-glow-gold"
+                  className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-card bg-crimson px-4 py-3 font-bold text-white shadow-glow-crimson"
                 >
                   <Phone className="h-5 w-5" aria-hidden="true" /> Call Now
                 </a>

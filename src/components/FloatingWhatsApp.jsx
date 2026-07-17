@@ -13,7 +13,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noreferrer"
       aria-label="Chat with Akshay Computers on WhatsApp"
-      className="animate-glow-pulse fixed bottom-5 right-5 z-40 flex h-[60px] w-[60px] items-center justify-center rounded-full border border-gold-bright/50 bg-gradient-to-br from-orange-coral to-orange-golden text-white transition-shadow duration-300 md:h-[70px] md:w-[70px]"
+      className="animate-glow-pulse fixed bottom-5 right-5 z-40 flex h-[60px] w-[60px] items-center justify-center rounded-full border border-crimson/50 bg-gradient-to-br from-maroon to-red-dark text-white transition-shadow duration-300 md:h-[70px] md:w-[70px]"
       animate={
         reduceMotion
           ? undefined

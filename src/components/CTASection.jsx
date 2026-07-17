@@ -9,10 +9,10 @@ export default function CTASection({
   subtitle = 'Get expert solutions tailored to your needs',
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-orange-apricot/30 via-cream to-orange-apricot/30">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blush/30 via-warm-white to-blush/30">
       <div
         aria-hidden="true"
-        className="animate-blob pointer-events-none absolute left-1/4 top-0 h-64 w-64 bg-gradient-to-br from-orange-coral/20 to-gold-bright/15 blur-3xl"
+        className="animate-blob pointer-events-none absolute left-1/4 top-0 h-64 w-64 bg-gradient-to-br from-maroon/20 to-crimson/15 blur-3xl"
       />
       <ParticleBackground count={20} />
       <div className="container-max section-padding relative text-center">

@@ -20,9 +20,9 @@ const contactOptions = [
     href: contactInfo.whatsappHref,
     cta: 'Open WhatsApp',
     color:
-      'bg-gradient-to-r from-orange-coral to-orange-golden text-white shadow-glow-orange hover:shadow-[0_0_30px_rgba(255,107,53,0.7)]',
-    iconColor: 'border-orange-coral/30 bg-orange-coral/10 text-orange-coral',
-    hoverGlow: 'hover:border-orange-coral/40 hover:shadow-glow-orange',
+      'bg-gradient-to-r from-maroon to-red-dark text-white shadow-glow-maroon hover:shadow-[0_8px_24px_rgba(139,30,30,0.25)]',
+    iconColor: 'border-maroon/30 bg-maroon/10 text-maroon',
+    hoverGlow: 'hover:border-maroon/40 hover:shadow-glow-maroon',
     external: true,
   },
   {
@@ -33,9 +33,9 @@ const contactOptions = [
     href: contactInfo.phoneHref,
     cta: 'Call Now',
     color:
-      'bg-gradient-to-r from-orange-golden to-gold-bright text-charcoal-deep shadow-glow-gold hover:shadow-[0_0_30px_rgba(255,215,0,0.6)]',
-    iconColor: 'border-orange-golden/40 bg-orange-golden/10 text-orange-golden',
-    hoverGlow: 'hover:border-gold-bright/60 hover:shadow-glow-gold',
+      'bg-crimson text-white shadow-glow-crimson hover:bg-red-dark hover:shadow-[0_8px_24px_rgba(192,57,43,0.22)]',
+    iconColor: 'border-red-dark/40 bg-red-dark/10 text-red-dark',
+    hoverGlow: 'hover:border-crimson/60 hover:shadow-glow-crimson',
   },
   {
     icon: Mail,
@@ -45,9 +45,9 @@ const contactOptions = [
     href: contactInfo.emailHref,
     cta: 'Send Email',
     color:
-      'bg-gradient-to-r from-orange-burnt to-orange-coral text-white shadow-glow-orange hover:shadow-[0_0_30px_rgba(232,93,63,0.6)]',
-    iconColor: 'border-orange-burnt/30 bg-orange-burnt/10 text-orange-burnt',
-    hoverGlow: 'hover:border-orange-burnt/40 hover:shadow-glow-orange',
+      'bg-gradient-to-r from-crimson to-maroon text-white shadow-glow-maroon hover:shadow-[0_8px_24px_rgba(165,42,42,0.22)]',
+    iconColor: 'border-crimson/30 bg-crimson/10 text-crimson',
+    hoverGlow: 'hover:border-crimson/40 hover:shadow-glow-maroon',
   },
 ];
 
@@ -88,7 +88,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-orange-apricot/20" aria-labelledby="contact-form-section">
+      <section className="bg-blush/20" aria-labelledby="contact-form-section">
         <div className="container-max section-padding">
           <SectionHeading
             title="Send Us a Message"
@@ -105,7 +105,7 @@ export default function ContactPage() {
               <div className="glass-card flex h-full flex-col gap-5 p-6 md:p-8">
                 <h3 className="font-heading text-xl font-bold text-charcoal-deep">Our Office</h3>
                 <div className="flex gap-3">
-                  <MapPin className="mt-1 h-5 w-5 shrink-0 text-orange-coral" aria-hidden="true" />
+                  <MapPin className="mt-1 h-5 w-5 shrink-0 text-maroon" aria-hidden="true" />
                   <address className="not-italic leading-relaxed text-charcoal-soft">
                     {contactInfo.addressLines.map((line) => (
                       <span key={line} className="block">
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   </address>
                 </div>
                 <div className="flex gap-3">
-                  <Clock className="mt-1 h-5 w-5 shrink-0 text-orange-coral" aria-hidden="true" />
+                  <Clock className="mt-1 h-5 w-5 shrink-0 text-maroon" aria-hidden="true" />
                   <p className="text-charcoal-soft">
                     {contactInfo.hours}
                     <br />
@@ -123,19 +123,19 @@ export default function ContactPage() {
                   </p>
                 </div>
                 <div className="flex gap-3">
-                  <Phone className="mt-1 h-5 w-5 shrink-0 text-orange-coral" aria-hidden="true" />
+                  <Phone className="mt-1 h-5 w-5 shrink-0 text-maroon" aria-hidden="true" />
                   <a
                     href={contactInfo.phoneHref}
-                    className="text-orange-coral hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.6)]"
+                    className="text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
                   >
                     {contactInfo.phone}
                   </a>
                 </div>
                 <div className="flex gap-3">
-                  <Mail className="mt-1 h-5 w-5 shrink-0 text-orange-coral" aria-hidden="true" />
+                  <Mail className="mt-1 h-5 w-5 shrink-0 text-maroon" aria-hidden="true" />
                   <a
                     href={contactInfo.emailHref}
-                    className="text-orange-coral hover:drop-shadow-[0_0_8px_rgba(255,107,53,0.6)]"
+                    className="text-maroon hover:drop-shadow-[0_1px_2px_rgba(139,30,30,0.35)]"
                   >
                     {contactInfo.email}
                   </a>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   href="https://www.google.com/maps/search/?api=1&query=New+Osmanpura+Chhatrapati+Sambhajinagar+431005"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-auto inline-flex min-h-[44px] items-center justify-center rounded-card border border-orange-coral/60 px-6 py-3 font-semibold text-orange-coral transition-all duration-300 hover:bg-orange-coral/10 hover:shadow-glow-orange"
+                  className="mt-auto inline-flex min-h-[44px] items-center justify-center rounded-card border border-maroon/60 px-6 py-3 font-semibold text-maroon transition-all duration-300 hover:bg-maroon/10 hover:shadow-glow-maroon"
                 >
                   View on Google Maps
                 </a>

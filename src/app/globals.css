@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-cream text-charcoal-deep antialiased;
+  @apply bg-warm-white text-charcoal-deep antialiased;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -24,7 +24,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #ff6b35;
+  outline: 2px solid #8b1e1e;
   outline-offset: 2px;
 }
 
@@ -37,23 +37,18 @@ body {
     @apply mx-auto max-w-container;
   }
 
-  /* Warm glassmorphic card — the base surface for every card on the site */
+  /* Refined card — the base surface for every card on the site */
   .glass-card {
-    @apply rounded-card-lg border border-orange-coral/15 bg-white/70 shadow-soft-orange backdrop-blur-md;
+    @apply rounded-card-lg border border-warm-grey bg-white/85 shadow-soft-brand backdrop-blur-sm;
   }
 
-  /* Animated orange→gold gradient text */
+  /* Subtle maroon→crimson gradient text for headings (static, elegant) */
   .text-gradient {
-    @apply bg-gradient-to-r from-orange-coral via-orange-golden to-gold-bright bg-clip-text text-transparent;
-    background-size: 200% auto;
-    animation: gradientShift 8s ease infinite;
+    @apply bg-gradient-to-r from-maroon to-crimson bg-clip-text text-transparent;
   }
 
-  /* Thin warm gradient divider line (orange → gold → pink → orange) */
+  /* Thin maroon divider line */
   .gradient-line {
-    @apply h-px w-full;
-    background: linear-gradient(90deg, #ff6b35, #ffd700, #f5a98d, #ff6b35);
-    background-size: 200% auto;
-    animation: gradientShift 6s linear infinite;
+    @apply h-px w-full bg-gradient-to-r from-maroon via-crimson to-maroon;
   }
 }

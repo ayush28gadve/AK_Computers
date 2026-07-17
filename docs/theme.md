@@ -6,7 +6,9 @@
 > creatives, business cards, signage, and any other brand material.
 >
 > Every value below is taken **exactly** from the live website code
-> (`tailwind.config.js`, `app/globals.css`, components). Last synced: July 2026.
+> (`tailwind.config.js`, `src/app/globals.css`, components). Last synced: July 2026.
+> **Identity v2 — premium maroon/red, traditional corporate.** (The previous
+> orange identity is retired.)
 
 ---
 
@@ -18,243 +20,210 @@
 | **Tagline** | Complete IT Solutions for Your Business |
 | **Positioning line** | CCTV, Repairs, Networking & Security — One-Stop IT Service Provider |
 | **Trust line** | Trusted for 35+ Years |
-| **Personality** | Warm, premium, energetic, trustworthy, modern |
-| **Look & feel** | Warm luxury light theme — coral orange + cream + gold, soft glows, glassmorphism, flowing gradients |
+| **Personality** | Traditional, premium, corporate, elegant, trustworthy, established |
+| **Look & feel** | Warm off-white surfaces, deep maroon accents, serif headings, restrained shadows — the identity of a well-established company, not a startup |
 
 ---
 
 ## 2. Color Palette (EXACT VALUES)
 
+**Rule zero: red is an accent, never a flood.** Backgrounds stay off-white,
+text stays dark; maroon/red appears only in buttons, links, icons, highlights
+and active states.
+
 ### 2.1 Primary Brand Colors
 
 | Name | Hex | RGB | Role |
 |---|---|---|---|
-| **Coral Orange** | `#FF6B35` | rgb(255, 107, 53) | **PRIMARY brand color.** Logo, main CTAs, links, icons, accents |
-| **Golden Orange** | `#FFA500` | rgb(255, 165, 0) | Secondary orange, gradient partner, secondary icons |
-| **Bright Gold** | `#FFD700` | rgb(255, 215, 0) | Gradient endpoint, stars, premium highlights |
-| **Deep Charcoal** | `#2B2B2B` | rgb(43, 43, 43) | Primary text, dark surfaces (footer), text on gold |
+| **Deep Maroon** | `#8B1E1E` | rgb(139, 30, 30) | **PRIMARY brand color.** Buttons, links, icons, active states |
+| Maroon Dark | `#6B1414` | rgb(107, 20, 20) | Button hover state |
+| **Dark Red** | `#A52A2A` | rgb(165, 42, 42) | Secondary accent, gradient partner |
+| **Soft Crimson** | `#C0392B` | rgb(192, 57, 43) | Tertiary accent, highlights, stars |
 
-### 2.2 Supporting Warm Tones
+### 2.2 Supporting Tones
 
 | Name | Hex | RGB | Role |
 |---|---|---|---|
-| Burnt Orange | `#E85D3F` | rgb(232, 93, 63) | Darker orange accent, required-field marks, email CTA |
-| Soft Peach | `#FFB366` | rgb(255, 179, 102) | Light accent, links on dark surfaces (footer hover) |
-| Apricot | `#FFCC99` | rgb(255, 204, 153) | Section background tints (used at 20% opacity) |
-| Warm Gold | `#D4A574` | rgb(212, 165, 116) | Muted gold accent, testimonial hover |
-| Soft Tan | `#E8D5C4` | rgb(232, 213, 196) | Subtle warm neutral |
+| Blush | `#F0DEDA` | rgb(240, 222, 218) | Section background tint (used at 20% opacity) |
+| Rose Light | `#E8B4AD` | rgb(232, 180, 173) | Light accent on dark surfaces (footer link hover) |
+| Warm Gold | `#D4A574` | rgb(212, 165, 116) | Occasional warm neutral accent (particles) |
 
 ### 2.3 Backgrounds (never pure white)
 
 | Name | Hex | RGB | Role |
 |---|---|---|---|
-| **Warm Cream** | `#FFFEF7` | rgb(255, 254, 247) | **Main page background** (use instead of white) |
-| Peach Mist | `#FFE5CC` | rgb(255, 229, 204) | Hero mesh gradient mid-tone |
-| Off-White | `#FAFAFA` | rgb(250, 250, 250) | Alternate light surface |
-| Cloud White | `#F5F5F5` | rgb(245, 245, 245) | Alternate light surface |
-| Card White | `rgba(255,255,255,0.70)` | white @ 70% | Glassmorphic card surface (over cream) |
+| **Warm White** | `#FAF8F6` | rgb(250, 248, 246) | **Main page background** |
+| Blush Mist | `#F3E4E0` | rgb(243, 228, 224) | Hero mesh gradient mid-tone |
+| Card White | `rgba(255,255,255,0.85)` | white @ 85% | Card surface (over warm white) |
 
-### 2.4 Text Colors
+### 2.4 Text & Border Colors
 
 | Name | Hex | RGB | Role |
 |---|---|---|---|
-| Deep Charcoal | `#2B2B2B` | rgb(43, 43, 43) | Headings, primary text |
+| Charcoal Black | `#2C2C2C` | rgb(44, 44, 44) | Headings, primary text, dark surfaces (footer) |
 | Soft Charcoal | `#4A4A4A` | rgb(74, 74, 74) | Body copy, subtitles |
 | Muted Gray | `#7A7A7A` | rgb(122, 122, 122) | Placeholders, fine print |
-| White | `#FFFFFF` | rgb(255, 255, 255) | Text on orange gradients & dark surfaces |
+| Light Warm Grey | `#E5E5E5` | rgb(229, 229, 229) | Card borders, dividers |
+| White | `#FFFFFF` | — | Text on maroon/crimson and dark surfaces |
 
-### 2.5 "Gemini" Rainbow Accents (sparingly — divider lines only)
-
-| Name | Hex | RGB |
-|---|---|---|
-| Gemini Cyan | `#00D4FF` | rgb(0, 212, 255) |
-| Gemini Purple | `#A855F7` | rgb(168, 85, 247) |
-| Gemini Pink | `#F5A98D` | rgb(245, 169, 141) |
-
-> **Print note:** Convert RGB→CMYK in your design tool at export time.
-> Approximate CMYK for the primary: Coral Orange #FF6B35 ≈ C0 M58 Y79 K0.
+> **Print note:** Deep Maroon #8B1E1E ≈ C0 M78 Y78 K45 (verify in your print tool).
+> Avoid bright or neon reds in any material.
 
 ---
 
 ## 3. Gradient Recipes (EXACT CSS)
 
-These gradients ARE the brand. Use them exactly.
+Gradients are **minimal and subtle** in this identity — never rainbow, never animated flash.
 
-### 3.1 Brand Text Gradient (logo wordmark, headings)
+### 3.1 Brand Text Gradient (major headings)
 ```css
-background: linear-gradient(90deg, #FF6B35, #FFA500, #FFD700);
-/* website version is animated: background-size: 200% auto, shifting 8s */
+background: linear-gradient(90deg, #8B1E1E, #C0392B);
+/* static — no animation */
 ```
 
-### 3.2 Primary Button / CTA Gradient (white text on top)
+### 3.2 Primary CTA Gradient (white text on top)
 ```css
-background: linear-gradient(90deg, #FF6B35, #FFA500);
+background: linear-gradient(90deg, #8B1E1E, #A52A2A);
 ```
 
-### 3.3 Gold Button Gradient (charcoal #2B2B2B text on top)
+### 3.3 Divider Line (thin 1px)
 ```css
-background: linear-gradient(90deg, #FFA500, #FFD700);
+background: linear-gradient(90deg, #8B1E1E, #C0392B, #8B1E1E);
 ```
 
-### 3.4 Rainbow Divider Line (thin 1px lines only)
+### 3.4 Poster / Hero Background Mesh
 ```css
-background: linear-gradient(90deg, #FF6B35, #FFD700, #F5A98D, #FF6B35);
+background: radial-gradient(at 20% 50%, #FAF8F6 0%, #F3E4E0 50%, #FAF8F6 100%);
 ```
 
-### 3.5 Hero / Poster Background Mesh
+### 3.5 Avatar / Badge Ring (circular frames)
 ```css
-background: radial-gradient(at 20% 50%, #FFFEF7 0%, #FFE5CC 50%, #FFFEF7 100%);
-```
-
-### 3.6 Avatar / Badge Ring (circular logos, profile frames)
-```css
-background: conic-gradient(from 0deg, #FF6B35, #FFD700, #FFB366, #FF6B35);
-```
-
-### 3.7 Full Gemini Gradient (rare, decorative only)
-```css
-background: linear-gradient(135deg, #FF6B35, #FFD700, #00D4FF, #A855F7, #F5A98D);
+background: conic-gradient(from 0deg, #8B1E1E, #C0392B, #E8B4AD, #8B1E1E);
 ```
 
 ---
 
 ## 4. Typography
 
-| Use | Font | Weights used | Fallback |
+| Use | Font | Weights | Fallback |
 |---|---|---|---|
-| **Headings / logo wordmark** | **Space Grotesk** | 500, 600, **700 (headings use Bold)** | Inter, sans-serif |
-| **Body text** | **Inter** | 400 (regular), 600 (semibold), 700 (bold) | system-ui, sans-serif |
+| **Headings / branding** | **Playfair Display** (premium serif) | 500, 600, **700** | Georgia, serif |
+| **Body text** | **Inter** (modern sans) | 400, 600, 700 | system-ui, sans-serif |
 
-Both fonts are free on Google Fonts — usable in any design tool.
+Both are free on Google Fonts. The serif/sans pairing is the core of the
+premium, established feel — serif for gravitas, sans for readability.
 
-### Type Scale (from the website)
+### Type Scale
 
-| Element | Size (desktop) | Size (mobile) | Weight | Tracking |
-|---|---|---|---|---|
-| Hero headline (H1) | 60px | 30–36px | 700 | tight (-0.02em) |
-| Page titles (H1 inner) | 48px | 36px | 700 | tight |
-| Section titles (H2) | 36px | 30px | 700 | tight |
-| Card titles (H3) | 18–24px | 18px | 700 | normal |
-| Body | 16–18px | 16px | 400 | normal, line-height 1.6 |
-| Small / captions | 14px | 14px | 400–600 | normal |
-
----
-
-## 5. The Wordmark & Logo (official files)
-
-**Official wordmark — two variants, pick by background:**
-
-| File | "kshay" color | Use on |
-|---|---|---|
-| `public/wordmark.png` | silvery white | **Dark surfaces** (charcoal footer, dark ads) |
-| `public/wordmark-dark.png` | deep charcoal | **Light surfaces** (cream/white header, print) |
-
-Both are 661×142 with transparent backgrounds and identical letterforms —
-orange "A" and gradient "Computers" in each. Never place the white variant on
-light backgrounds (it disappears) or the dark variant on dark ones.
-
-If a text fallback is ever needed (plain documents, invoices), set
-"Akshay Computers" in Space Grotesk Bold: "Akshay" in Deep Charcoal `#2B2B2B`
-(white on dark), "Computers" in the brand gradient (§3.1).
-
-**Official logo mark:** the file `public/logo.png` (624×400, transparent
-background) — a bold gradient **"A"** (deep red-orange → coral → golden) cut
-by a rising orange-gold **swoosh** that sweeps through both legs. This exact
-file is the single source of truth for the mark: the website renders it via
-`src/components/Logo.jsx` (small, next to the wordmark) and the favicon
-`src/app/icon.png` is generated from it. Use `public/logo.png` for all
-external brand material.
+| Element | Desktop | Mobile | Weight |
+|---|---|---|---|
+| Hero headline (H1) | 60px | 30–36px | 700 serif |
+| Page titles | 48px | 36px | 700 serif |
+| Section titles (H2) | 36px | 30px | 700 serif |
+| Card titles (H3) | 18–24px | 18px | 700 serif |
+| Body | 16–18px | 16px | 400 sans, line-height 1.6 |
+| Small / captions | 14px | 14px | 400–600 sans |
 
 ---
 
-## 6. Signature Effects (what makes it feel premium)
+## 5. The Wordmark & Logo
 
-### 6.1 Glow Shadows (exact values)
+⚠️ **Pending update:** the current files `public/logo.png`, `public/wordmark.png`
+and `public/wordmark-dark.png` are still the previous **orange** identity and
+clash with the maroon palette. Replace them with red/maroon versions of the
+same marks; the components (`src/components/Logo.jsx`, `Wordmark.jsx`) and the
+favicon pick the new files up automatically once swapped (same filenames).
+
+Wordmark placement rules (apply to the new versions too):
+- Light-lettered variant → dark surfaces only (charcoal footer, dark ads)
+- Dark-lettered variant → light surfaces (warm-white header, print)
+
+Text fallback for plain documents: "Akshay Computers" in Playfair Display
+Bold — "Akshay" in Charcoal `#2C2C2C`, "Computers" in Deep Maroon `#8B1E1E`.
+
+---
+
+## 6. Surfaces, Shadows & Effects
+
+### 6.1 Shadows (maroon-tinted, restrained — never neon glows)
 
 | Name | CSS box-shadow | Use |
 |---|---|---|
-| Orange glow | `0 0 20px rgba(255,107,53,0.4)` | Buttons, active elements |
-| Orange glow large | `0 0 40px rgba(255,107,53,0.25)` | Card hover auras |
-| Gold glow | `0 0 18px rgba(212,165,116,0.4)` | Gold buttons/highlights |
-| Peach glow | `0 0 15px rgba(255,179,102,0.3)` | Soft accents, input focus |
-| Soft shadow | `0 2px 8px rgba(255,107,53,0.08)` | Resting cards |
-| Medium shadow | `0 4px 16px rgba(255,107,53,0.15)` | Header on scroll |
-| Premium shadow | `0 12px 40px rgba(255,107,53,0.2)` | Featured elements |
+| Soft | `0 2px 8px rgba(139,30,30,0.06)` | Resting cards |
+| Medium | `0 4px 16px rgba(139,30,30,0.10)` | Buttons, header on scroll |
+| Premium | `0 12px 40px rgba(139,30,30,0.12)` | Featured elements, hover |
+| Accent maroon | `0 6px 20px rgba(139,30,30,0.18)` | Card hover |
+| Accent crimson | `0 6px 18px rgba(192,57,43,0.16)` | Secondary hover |
 
-Note: shadows are **orange-tinted**, never plain black — this is a brand signature.
-
-### 6.2 Glassmorphic Card (the standard surface)
+### 6.2 Standard Card
 ```css
-background: rgba(255, 255, 255, 0.70);
-border: 1px solid rgba(255, 107, 53, 0.15);   /* coral @ 15% */
+background: rgba(255, 255, 255, 0.85);
+border: 1px solid #E5E5E5;              /* light warm grey */
 border-radius: 16px;
-backdrop-filter: blur(12px);
-box-shadow: 0 2px 8px rgba(255, 107, 53, 0.08);
+box-shadow: 0 2px 8px rgba(139, 30, 30, 0.06);
 ```
 
 ### 6.3 Icon Chips
-Icons (Lucide icon set, 2px rounded strokes) sit in soft tinted containers:
+Lucide icons (2px rounded strokes) in soft tinted containers:
 ```css
-background: rgba(255, 107, 53, 0.10);          /* brand color @ 10% */
-border: 1px solid rgba(255, 107, 53, 0.30);    /* brand color @ 30% */
+background: rgba(139, 30, 30, 0.10);     /* maroon @ 10% */
+border: 1px solid rgba(139, 30, 30, 0.30);
 border-radius: 12px (square) or 9999px (circle);
-color: #FF6B35;                                 /* icon stroke */
+color: #8B1E1E;
 ```
 
-### 6.4 Corner Radii
+### 6.4 Buttons
 
-| Token | Value |
+| Variant | Style |
 |---|---|
-| Small | 8px |
-| Standard (buttons, inputs) | 12px |
-| Cards | 16px |
-| Large panels | 24px |
-| Pills/avatars | fully rounded |
+| **Primary** | Deep Maroon `#8B1E1E` bg, white bold text, 12px radius; hover → `#6B1414` + slight lift |
+| **Secondary** | White bg, 1px maroon border, maroon text; hover → maroon bg, white text |
+| **Outline** | Transparent bg, maroon border/text; hover → 5% maroon tint |
+
+### 6.5 Corner Radii
+8px (small) · 12px (buttons/inputs) · 16px (cards) · 24px (large panels) · full (pills/avatars)
 
 ---
 
-## 7. Motion Language (for video ads / animated banners)
+## 7. Motion Language
+
+Restrained and smooth — motion supports elegance, it never shouts.
 
 | Property | Value |
 |---|---|
 | Standard duration | 300ms |
 | Entrance/reveal | 600ms, fade + rise 24px |
 | Standard easing | `cubic-bezier(0.4, 0, 0.2, 1)` |
-| Playful easing (buttons) | `cubic-bezier(0.34, 1.56, 0.64, 1)` (slight overshoot) |
-| Breathing glow | 2.5s loop, glow 15px → 30px → 15px |
-| Float drift | 4s loop, rise 8px and back |
-| Gradient shift | 8s loop, background position 0% → 100% → 0% |
-| Blob morph | 8s loop, organic border-radius morphing |
-| Particles | warm dots (coral/gold/peach/tan), 2–6px, soft glow, slow drift |
-
-Feel: **slow, smooth, luxurious.** Nothing snaps; everything breathes.
+| Shadow pulse (CTAs) | 3s loop, subtle maroon shadow breathing |
+| Float drift (icons) | 4s loop, rise 6px |
+| Background mesh shift | 12s slow loop |
+| Particles | sparse maroon/crimson/rose dots, small, low opacity, slow drift |
 
 ---
 
-## 8. Color Usage Rules (contrast-safe combinations)
+## 8. Color Usage Rules
 
 **Approved text/background pairs:**
 
 | Background | Text |
 |---|---|
-| Cream `#FFFEF7` / white | Charcoal `#2B2B2B` (body: `#4A4A4A`) |
-| Coral→Golden gradient (§3.2) | White `#FFFFFF`, bold |
-| Golden→Gold gradient (§3.3) | Charcoal `#2B2B2B`, bold |
-| Charcoal `#2B2B2B` (dark surface) | White; links in Soft Peach `#FFB366` |
-| Cream | Coral `#FF6B35` for links/accents (bold, 16px+) |
+| Warm White `#FAF8F6` / white | Charcoal `#2C2C2C` (body: `#4A4A4A`) |
+| Deep Maroon `#8B1E1E` | White, bold |
+| Soft Crimson `#C0392B` | White, bold |
+| Charcoal `#2C2C2C` (footer/dark) | White; links in Rose Light `#E8B4AD` |
+| Warm White | Maroon `#8B1E1E` for links/accents |
 
 **Do:**
-- Use cream `#FFFEF7` as the base — never stark pure-white pages
-- Keep orange-tinted (not black) shadows
-- Use the gradient direction left→right (90°) for text and buttons
-- Give the wordmark generous whitespace
+- Keep backgrounds off-white; use red strictly as accent
+- Maroon-tinted (not black) shadows
+- Serif for headings, sans for body — always
+- Generous whitespace; restrained, minimal gradients
 
 **Don't:**
-- Don't put white text on Bright Gold `#FFD700` (fails contrast — use charcoal)
-- Don't use small/thin coral text on cream (bold and 16px+ only)
-- Don't use the Gemini cyan/purple as fills — thin decorative lines only
-- Don't mix in the old themes (navy/neon cyan from previous versions are retired)
-- Don't use pure black `#000000` anywhere
+- Don't saturate large areas in red — no red section backgrounds
+- Don't use bright/neon reds anywhere
+- Don't use the retired orange palette or animated rainbow gradients
+- Don't use pure black `#000000` or pure white `#FFFFFF` page backgrounds
 
 ---
 
@@ -270,22 +239,20 @@ Feel: **slow, smooth, luxurious.** Nothing snaps; everything breathes.
 | **Services (short list)** | CCTV Systems · Laptop Repair · Desktop Repair · Networking · Office IT Setup · AMC · Intercom · Accessories · Monitors · Tech Support |
 | **Trust stats** | 1000+ Installations · 35+ Years · 24/7 Support · 100% Satisfaction |
 
-> ⚠️ Phone and email are currently marked as *testing* values — confirm before
-> printing anything physical.
+> ⚠️ Phone and email are currently *testing* values — confirm before printing.
 
 ---
 
 ## 10. Quick-Start Recipes
 
-**Logo on light:** wordmark per §5 on cream `#FFFEF7`, optional conic-ring AC monogram.
+**Poster/banner background:** hero mesh (§3.4) + 2–3 large blurred maroon/crimson
+blobs at 15–25% opacity. Keep it airy — mostly warm white.
 
-**Logo on dark:** "Akshay" in white + "Computers" in gradient §3.1, on charcoal `#2B2B2B`.
+**CTA button for ads:** solid Deep Maroon, white bold text (Inter or Playfair),
+12px radius, shadow `0 4px 16px rgba(139,30,30,0.10)`.
 
-**Poster/banner background:** hero mesh (§3.5) + 2–3 large blurred blobs of
-coral/gold at 15–25% opacity + a few small glowing warm particles.
+**Headline treatment:** Playfair Display Bold in Charcoal, with one key phrase
+in the maroon→crimson text gradient (§3.1), thin divider line (§3.3) beneath.
 
-**CTA button for ads:** gradient §3.2, white bold Space Grotesk text,
-12px radius, orange glow `0 0 20px rgba(255,107,53,0.4)`.
-
-**Social post frame:** glassmorphic card (§6.2) over the mesh background, rainbow
-divider line (§3.4) under the heading, icon chips (§6.3) for feature bullets.
+**Social post frame:** standard card (§6.2) over the mesh background, maroon
+divider under the heading, maroon icon chips (§6.3) for feature bullets.

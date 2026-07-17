@@ -1,14 +1,14 @@
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const spaceGrotesk = Space_Grotesk({
+const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['500', '600', '700'],
-  variable: '--font-space',
+  variable: '--font-serif',
   display: 'swap',
 });
 
@@ -56,7 +56,7 @@ const businessSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans">
         <script
           type="application/ld+json"

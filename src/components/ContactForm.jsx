@@ -9,7 +9,7 @@ const ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || '';
 const isConfigured = ENDPOINT && !ENDPOINT.includes('REPLACE_WITH_REAL_ID');
 
 const inputClasses =
-  'w-full min-h-[48px] rounded-card border border-orange-coral/20 bg-white px-4 py-3 text-base text-charcoal-deep placeholder:text-gray-muted transition-all duration-300 focus:border-orange-coral focus:outline-none focus:ring-2 focus:ring-orange-coral/25 focus:shadow-glow-peach';
+  'w-full min-h-[48px] rounded-card border border-maroon/20 bg-white px-4 py-3 text-base text-charcoal-deep placeholder:text-gray-muted transition-all duration-300 focus:border-maroon focus:outline-none focus:ring-2 focus:ring-maroon/25 focus:shadow-glow-soft';
 
 function Field({ label, id, error, required, children }) {
   return (
@@ -17,7 +17,7 @@ function Field({ label, id, error, required, children }) {
       <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-charcoal-deep">
         {label}
         {required && (
-          <span className="text-orange-burnt" aria-hidden="true">
+          <span className="text-crimson" aria-hidden="true">
             {' '}
             *
           </span>
@@ -160,7 +160,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-6 py-3 text-base font-bold text-white shadow-glow-orange transition-all duration-300 ease-bounce hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(255,107,53,0.7)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-card bg-gradient-to-r from-maroon to-red-dark px-6 py-3 text-base font-bold text-white shadow-glow-maroon transition-all duration-300 ease-bounce hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(139,30,30,0.25)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {status === 'submitting' ? (
           <>

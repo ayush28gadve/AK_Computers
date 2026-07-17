@@ -10,7 +10,7 @@ export default function Accordion({ items, idPrefix = 'accordion' }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <div className="glass-card divide-y divide-orange-coral/10 overflow-hidden">
+    <div className="glass-card divide-y divide-maroon/10 overflow-hidden">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         const panelId = `${idPrefix}-panel-${index}`;
@@ -24,14 +24,14 @@ export default function Accordion({ items, idPrefix = 'accordion' }) {
               aria-expanded={isOpen}
               aria-controls={panelId}
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className={`flex min-h-[44px] w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold transition-colors duration-300 hover:bg-orange-apricot/20 ${
-                isOpen ? 'text-orange-coral' : 'text-charcoal-deep'
+              className={`flex min-h-[44px] w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold transition-colors duration-300 hover:bg-blush/20 ${
+                isOpen ? 'text-maroon' : 'text-charcoal-deep'
               }`}
             >
               <span>{item.title}</span>
               <ChevronDown
                 aria-hidden="true"
-                className={`h-5 w-5 shrink-0 text-orange-coral transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                className={`h-5 w-5 shrink-0 text-maroon transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
               />
             </button>
             <AnimatePresence initial={false}>

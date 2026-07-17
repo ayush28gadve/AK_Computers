@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-orange-apricot/20" aria-labelledby="our-expertise">
+      <section className="bg-blush/20" aria-labelledby="our-expertise">
         <div className="container-max section-padding">
           <SectionHeading
             title="Our Expertise"
@@ -55,8 +55,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {expertiseAreas.map((area, index) => (
               <Reveal key={area.title} delay={(index % 3) * 0.1}>
-                <div className="glass-card flex h-full flex-col gap-3 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-orange-coral/40 hover:shadow-glow-orange">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-card border border-orange-coral/30 bg-orange-coral/10 text-orange-coral transition-transform duration-300 hover:rotate-12 hover:scale-110">
+                <div className="glass-card flex h-full flex-col gap-3 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-maroon/40 hover:shadow-glow-maroon">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-card border border-maroon/30 bg-maroon/10 text-maroon transition-transform duration-300 hover:rotate-12 hover:scale-110">
                     <Icon name={area.icon} className="h-6 w-6" />
                   </span>
                   <h3 className="font-heading text-lg font-bold text-charcoal-deep">
@@ -83,12 +83,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-orange-apricot/20" aria-labelledby="mission-vision">
+      <section className="bg-blush/20" aria-labelledby="mission-vision">
         <div className="container-max section-padding">
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
             <Reveal>
-              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-orange-golden/50 hover:shadow-glow-gold">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-orange-golden/40 bg-orange-golden/10 text-orange-golden">
+              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-red-dark/50 hover:shadow-glow-crimson">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-red-dark/40 bg-red-dark/10 text-red-dark">
                   <Target className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="font-heading text-xl font-bold text-charcoal-deep">Our Mission</h3>
@@ -99,8 +99,8 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-orange-burnt/40 hover:shadow-glow-orange">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-orange-burnt/30 bg-orange-burnt/10 text-orange-burnt">
+              <div className="glass-card flex h-full flex-col gap-3 p-8 transition-all duration-300 hover:border-crimson/40 hover:shadow-glow-maroon">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full border border-crimson/30 bg-crimson/10 text-crimson">
                   <Compass className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="font-heading text-xl font-bold text-charcoal-deep">Our Vision</h3>

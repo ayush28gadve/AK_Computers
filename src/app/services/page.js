@@ -36,7 +36,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-orange-apricot/20" aria-labelledby="service-details">
+      <section className="bg-blush/20" aria-labelledby="service-details">
         <div className="container-max section-padding">
           <SectionHeading
             title="Detailed Service Breakdown"
@@ -58,7 +58,7 @@ export default function ServicesPage() {
                         {service.included.map((item) => (
                           <li key={item} className="flex items-start gap-2">
                             <CheckCircle
-                              className="mt-0.5 h-4 w-4 shrink-0 text-orange-golden"
+                              className="mt-0.5 h-4 w-4 shrink-0 text-red-dark"
                               aria-hidden="true"
                             />
                             {item}
@@ -94,7 +94,7 @@ export default function ServicesPage() {
       />
 
       {/* Sticky mobile CTA bar */}
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-orange-coral/15 bg-white/90 p-3 shadow-premium-shadow backdrop-blur-md md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-maroon/15 bg-white/90 p-3 shadow-premium-shadow backdrop-blur-md md:hidden">
         <div className="flex items-center justify-between gap-3">
           <p className="text-sm font-semibold text-charcoal-deep">Need this service?</p>
           <div className="flex gap-2">
@@ -102,13 +102,13 @@ export default function ServicesPage() {
               href={contactInfo.whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-card bg-gradient-to-r from-orange-coral to-orange-golden px-4 py-2 text-sm font-bold text-white shadow-glow-orange"
+              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-card bg-gradient-to-r from-maroon to-red-dark px-4 py-2 text-sm font-bold text-white shadow-glow-maroon"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" /> WhatsApp
             </a>
             <a
               href={contactInfo.phoneHref}
-              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-card bg-gradient-to-r from-orange-golden to-gold-bright px-4 py-2 text-sm font-bold text-charcoal-deep shadow-glow-gold"
+              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-card bg-crimson px-4 py-2 text-sm font-bold text-white shadow-glow-crimson"
             >
               <Phone className="h-4 w-4" aria-hidden="true" /> Call
             </a>

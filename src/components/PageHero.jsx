@@ -11,11 +11,11 @@ export default function PageHero({ title, subtitle }) {
       />
       <div
         aria-hidden="true"
-        className="animate-blob pointer-events-none absolute -right-20 -top-20 h-72 w-72 bg-gradient-to-br from-orange-coral/20 to-gold-bright/15 blur-3xl"
+        className="animate-blob pointer-events-none absolute -right-20 -top-20 h-72 w-72 bg-gradient-to-br from-maroon/20 to-crimson/15 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="animate-blob pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 bg-gradient-to-tr from-orange-peach/20 to-orange-apricot/15 blur-3xl"
+        className="animate-blob pointer-events-none absolute -bottom-24 -left-16 h-72 w-72 bg-gradient-to-tr from-rose-light/20 to-blush/15 blur-3xl"
         style={{ animationDelay: '-4s' }}
       />
       <div className="container-max relative px-4 text-center sm:px-6 lg:px-8">
