@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 860" font-family="'Playfair Display', Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="akAf" x1="304" y1="470" x2="704" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B1E1E"/>
+      <stop offset="0.55" stop-color="#A52A2A"/>
+      <stop offset="1" stop-color="#C0392B"/>
+    </linearGradient>
+    <linearGradient id="akSf" x1="278" y1="0" x2="731" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A52A2A"/>
+      <stop offset="1" stop-color="#C0392B"/>
+    </linearGradient>
+    <mask id="akGapF">
+      <rect width="1000" height="860" fill="white"/>
+      <path d="M278 448 Q479 400 731 250 Q519 452 278 448 Z" fill="black" stroke="black" stroke-width="22" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <!-- Icon centered (512 grid translated +244,+10) -->
+  <g mask="url(#akGapF)">
+    <polygon points="482,90 538,90 406,462 350,462" fill="url(#akAf)"/>
+    <polygon points="518,172 574,148 680,462 624,462" fill="url(#akAf)"/>
+  </g>
+  <path d="M278 448 Q479 400 731 250 Q519 452 278 448 Z" fill="url(#akSf)"/>
+  <!-- Brand name -->
+  <text x="500" y="640" text-anchor="middle" font-size="104" font-weight="700" fill="#2C2C2C">Akshay <tspan fill="#8B1E1E">Computers</tspan></text>
+  <!-- Tagline -->
+  <text x="500" y="720" text-anchor="middle" font-size="42" letter-spacing="6" fill="#4A4A4A">COMPLETE IT &amp; SECURITY SOLUTIONS</text>
+</svg>

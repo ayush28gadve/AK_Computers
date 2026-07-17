@@ -126,20 +126,23 @@ premium, established feel — serif for gravitas, sans for readability.
 
 ---
 
-## 5. The Wordmark & Logo
+## 5. The Logo & Wordmark (Identity v2 — official vector assets)
 
-⚠️ **Pending update:** the current files `public/logo.png`, `public/wordmark.png`
-and `public/wordmark-dark.png` are still the previous **orange** identity and
-clash with the maroon palette. Replace them with red/maroon versions of the
-same marks; the components (`src/components/Logo.jsx`, `Wordmark.jsx`) and the
-favicon pick the new files up automatically once swapped (same filenames).
+**The mark:** a maroon "A" — full left stroke, detached right stroke — cut by
+a rising swoosh. Gradient runs bottom-left `#8B1E1E` → `#A52A2A` → top-right
+`#C0392B`. All masters live in **`public/brand/`** (see its README for the
+full file list): icon (gradient / mono / white), horizontal lockup, full
+lockup with tagline, and a 6%-opacity watermark for documents.
 
-Wordmark placement rules (apply to the new versions too):
-- Light-lettered variant → dark surfaces only (charcoal footer, dark ads)
-- Dark-lettered variant → light surfaces (warm-white header, print)
+**The wordmark:** typeset, not an image — "Akshay" in Charcoal + "Computers"
+in Deep Maroon, Playfair Display Bold (Georgia fallback). On dark surfaces:
+"Akshay" white + "Computers" in Rose Light `#E8B4AD`.
 
-Text fallback for plain documents: "Akshay Computers" in Playfair Display
-Bold — "Akshay" in Charcoal `#2C2C2C`, "Computers" in Deep Maroon `#8B1E1E`.
+**Tagline lockup:** COMPLETE IT & SECURITY SOLUTIONS — letter-spaced caps,
+Soft Charcoal `#4A4A4A`.
+
+Placement: gradient/mono icon on light backgrounds; white icon on dark.
+Favicon (`src/app/icon.svg`) uses the same geometry.
 
 ---
 

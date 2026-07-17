@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <mask id="akGapW">
+      <rect width="512" height="512" fill="white"/>
+      <path d="M34 438 Q235 390 487 240 Q275 442 34 438 Z" fill="black" stroke="black" stroke-width="22" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <g mask="url(#akGapW)">
+    <polygon points="238,80 294,80 162,452 106,452" fill="#FFFFFF"/>
+    <polygon points="274,162 330,138 436,452 380,452" fill="#FFFFFF"/>
+  </g>
+  <path d="M34 438 Q235 390 487 240 Q275 442 34 438 Z" fill="#FFFFFF"/>
+</svg>

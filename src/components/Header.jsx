@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion';
 import { Menu, MessageCircle, Phone, X } from 'lucide-react';
 import Logo from './Logo';
-import Wordmark from './Wordmark';
 import { contactInfo, navLinks } from '@/lib/data';
 
 export default function Header() {
@@ -55,8 +54,10 @@ export default function Header() {
           href="/"
           className="flex items-center gap-2.5 transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(139,30,30,0.4)]"
         >
-          <Logo className="h-8 w-auto shrink-0" />
-          <Wordmark onLight className="h-6 w-auto shrink-0" />
+          <Logo className="h-9 w-auto shrink-0" />
+          <span className="font-heading text-xl font-bold text-charcoal-deep">
+            Akshay <span className="text-maroon">Computers</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

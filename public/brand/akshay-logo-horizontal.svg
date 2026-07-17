@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 400" font-family="'Playfair Display', Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="akAh" x1="47" y1="359" x2="359" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B1E1E"/>
+      <stop offset="0.55" stop-color="#A52A2A"/>
+      <stop offset="1" stop-color="#C0392B"/>
+    </linearGradient>
+    <linearGradient id="akSh" x1="27" y1="0" x2="380" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A52A2A"/>
+      <stop offset="1" stop-color="#C0392B"/>
+    </linearGradient>
+    <mask id="akGapH">
+      <rect width="1560" height="400" fill="white"/>
+      <path d="M27 342 Q184 305 380 188 Q215 345 27 342 Z" fill="black" stroke="black" stroke-width="17" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <!-- Icon (512 grid scaled x0.78, translated -->
+  <g mask="url(#akGapH)">
+    <polygon points="186,63 230,63 127,353 83,353" fill="url(#akAh)"/>
+    <polygon points="214,127 258,108 340,353 297,353" fill="url(#akAh)"/>
+  </g>
+  <path d="M27 342 Q184 305 380 188 Q215 345 27 342 Z" fill="url(#akSh)"/>
+  <!-- Wordmark -->
+  <text x="440" y="248" font-size="150" font-weight="700" fill="#2C2C2C">Akshay <tspan fill="#8B1E1E">Computers</tspan></text>
+</svg>
