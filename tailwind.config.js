@@ -75,10 +75,6 @@ module.exports = {
           '0%': { transform: 'translateX(-100%) skewX(-12deg)' },
           '100%': { transform: 'translateX(200%) skewX(-12deg)' },
         },
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
       },
       animation: {
         float: 'float 4s ease-in-out infinite',
@@ -88,8 +84,6 @@ module.exports = {
         blob: 'blobMorph 10s ease-in-out infinite',
         'light-sweep': 'lightSweep 24s ease-in-out infinite',
         'spin-slow': 'spin 10s linear infinite',
-        'marquee-left': 'marquee 55s linear infinite reverse',
-        'marquee-right': 'marquee 55s linear infinite',
       },
     },
   },
