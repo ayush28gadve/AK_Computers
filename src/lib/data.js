@@ -161,6 +161,7 @@ export const team = [
     slug: 'kailash-gadve',
     name: 'Kailash Gadve',
     initials: 'KG',
+    image: '/team/kailash.png',
     phone: '+91 9326201923',
     phoneHref: 'tel:+919326201923',
     email: 'gadve1234@gmail.com',
