@@ -139,7 +139,7 @@ export const featuredServiceSlugs = ['cctv', 'laptop', 'networking', 'amc', 'off
 export const team = [
   {
     slug: 'prasad-nilangekar',
-    name: 'Prasad Nilangekar',
+    name: 'Mr. Prasad Nilangekar',
     initials: 'PN',
     image: '/team/prasad.png',
     phone: '+91 9595996295',
@@ -155,11 +155,11 @@ export const team = [
       'Business Operations Management',
       'Financial & Administrative Coordination',
     ],
-    bio: 'Prasad manages daily business operations — client communication, quotations, billing and invoices, and financial coordination. As the primary point of contact for customers, he ensures every project is managed professionally from enquiry to completion.',
+    bio: 'Mr. Prasad manages daily business operations — client communication, quotations, billing and invoices, and financial coordination. As the primary point of contact for customers, he ensures every project is managed professionally from enquiry to completion.',
   },
   {
     slug: 'kailash-gadve',
-    name: 'Kailash Gadve',
+    name: 'Mr. Kailash Gadve',
     initials: 'KG',
     image: '/team/kailash.png',
     phone: '+91 9326201923',
@@ -173,7 +173,7 @@ export const team = [
       'Installation & Setup',
       'Customer Service Excellence',
     ],
-    bio: 'Kailash brings dedicated expertise in customer service and hands-on technical support, ensuring every client receives prompt and professional assistance.',
+    bio: 'Mr. Kailash brings dedicated expertise in customer service and hands-on technical support, ensuring every client receives prompt and professional assistance.',
   },
 ];
 
