@@ -20,15 +20,18 @@ import {
   testimonials,
   whyChooseUs,
 } from '@/lib/data';
+import { getAvailableProducts } from '@/lib/products';
 
 const featuredServices = featuredServiceSlugs.map((slug) =>
   services.find((service) => service.slug === slug)
 );
 
 export default function HomePage() {
+  const products = getAvailableProducts();
+
   return (
     <>
-      <Hero />
+      <Hero products={products} />
 
       {/* Trust indicators */}
       <section className="bg-blush/20" aria-label="Company statistics">

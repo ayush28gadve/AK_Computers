@@ -4,11 +4,13 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { MessageCircle, Phone } from 'lucide-react';
 import CTAButton from './CTAButton';
 import ParticleBackground from './ParticleBackground';
+import ProductShowcase from './ProductShowcase';
 import { contactInfo } from '@/lib/data';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
-export default function Hero() {
+export default function Hero({ products = [] }) {
   const reduceMotion = useReducedMotion();
+  const hasShowcase = products.length > 0;
 
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28">
@@ -41,45 +43,59 @@ export default function Hero() {
         className="animate-light-sweep pointer-events-none absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/40 to-transparent"
       />
 
-      {/* Layer 4: floating warm particles (mouse-reactive) */}
-      <ParticleBackground count={80} />
+      {/* Layer 4: floating particles (mouse-reactive) */}
+      <ParticleBackground count={hasShowcase ? 40 : 80} />
 
-      <motion.div
-        className="container-max relative px-4 sm:px-6 lg:px-8"
-        variants={reduceMotion ? undefined : staggerContainer}
-        initial={reduceMotion ? false : 'hidden'}
-        animate={reduceMotion ? false : 'visible'}
-      >
-        <div className="max-w-3xl">
-          <motion.h1
-            variants={reduceMotion ? undefined : fadeInUp}
-            className="font-heading text-3xl font-bold leading-tight tracking-tight text-charcoal-deep sm:text-4xl md:text-5xl lg:text-6xl"
-          >
-            Complete IT Solutions for Your Business —{' '}
-            <span className="text-gradient drop-shadow-[0_2px_4px_rgba(139,30,30,0.2)]">
-              Trusted for 35+ Years
-            </span>
-          </motion.h1>
-          <motion.p
-            variants={reduceMotion ? undefined : fadeInUp}
-            className="mt-5 text-lg text-charcoal-soft md:text-xl"
-          >
-            CCTV, Repairs, Networking &amp; Security — One-Stop IT Service Provider in
-            Chhatrapati Sambhajinagar
-          </motion.p>
+      <div className="container-max relative px-4 sm:px-6 lg:px-8">
+        <div
+          className={
+            hasShowcase
+              ? 'grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8'
+              : ''
+          }
+        >
           <motion.div
-            variants={reduceMotion ? undefined : fadeInUp}
-            className="mt-8 flex flex-col gap-4 sm:flex-row"
+            className={hasShowcase ? '' : 'max-w-3xl'}
+            variants={reduceMotion ? undefined : staggerContainer}
+            initial={reduceMotion ? false : 'hidden'}
+            animate={reduceMotion ? false : 'visible'}
           >
-            <CTAButton href={contactInfo.whatsappHref} variant="whatsapp">
-              <MessageCircle className="h-5 w-5" aria-hidden="true" /> Chat on WhatsApp
-            </CTAButton>
-            <CTAButton href={contactInfo.phoneHref} variant="primary">
-              <Phone className="h-5 w-5" aria-hidden="true" /> Call Now: {contactInfo.phone}
-            </CTAButton>
+            <motion.h1
+              variants={reduceMotion ? undefined : fadeInUp}
+              className="font-heading text-3xl font-bold leading-tight tracking-tight text-charcoal-deep sm:text-4xl md:text-5xl lg:text-6xl"
+            >
+              Complete IT Solutions for Your Business —{' '}
+              <span className="text-gradient drop-shadow-[0_2px_4px_rgba(139,30,30,0.2)]">
+                Trusted for 35+ Years
+              </span>
+            </motion.h1>
+            <motion.p
+              variants={reduceMotion ? undefined : fadeInUp}
+              className="mt-5 text-lg text-charcoal-soft md:text-xl"
+            >
+              CCTV, Repairs, Networking &amp; Security — One-Stop IT Service Provider in
+              Chhatrapati Sambhajinagar
+            </motion.p>
+            <motion.div
+              variants={reduceMotion ? undefined : fadeInUp}
+              className="mt-8 flex flex-col gap-4 sm:flex-row"
+            >
+              <CTAButton href={contactInfo.whatsappHref} variant="whatsapp">
+                <MessageCircle className="h-5 w-5" aria-hidden="true" /> Chat on WhatsApp
+              </CTAButton>
+              <CTAButton href={contactInfo.phoneHref} variant="primary">
+                <Phone className="h-5 w-5" aria-hidden="true" /> Call Now: {contactInfo.phone}
+              </CTAButton>
+            </motion.div>
           </motion.div>
+
+          {hasShowcase && (
+            <div className="mt-4 lg:mt-0">
+              <ProductShowcase products={products} />
+            </div>
+          )}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
