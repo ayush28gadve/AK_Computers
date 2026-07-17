@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { CheckCircle, Mail, Phone } from 'lucide-react';
 
 export default function TeamCard({
@@ -10,6 +11,7 @@ export default function TeamCard({
   phoneHref,
   email,
   emailHref,
+  image,
 }) {
   return (
     <div className="glass-card group flex h-full flex-col gap-5 p-8 transition-all duration-300 ease-bounce hover:border-red-dark/50 hover:shadow-glow-maroon-lg">
@@ -19,8 +21,19 @@ export default function TeamCard({
           aria-hidden="true"
           className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,#8B1E1E,#C0392B,#E8B4AD,#8B1E1E)] animate-spin-slow shadow-glow-soft"
         />
-        <div className="absolute inset-1 flex items-center justify-center rounded-full bg-warm-white transition-transform duration-300 group-hover:scale-105">
-          <span className="text-gradient font-heading text-5xl font-bold">{initials}</span>
+        <div className="absolute inset-1 flex items-center justify-center overflow-hidden rounded-full bg-warm-white transition-transform duration-300 group-hover:scale-105">
+          {image ? (
+            <Image
+              src={image}
+              alt={`Photo of ${name}`}
+              fill
+              sizes="160px"
+              className="rounded-full object-cover"
+              style={{ objectPosition: '50% 15%' }}
+            />
+          ) : (
+            <span className="text-gradient font-heading text-5xl font-bold">{initials}</span>
+          )}
         </div>
       </div>
       <div className="text-center">

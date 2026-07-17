@@ -141,6 +141,7 @@ export const team = [
     slug: 'prasad-nilangekar',
     name: 'Prasad Nilangekar',
     initials: 'PN',
+    image: '/team/prasad.png',
     phone: '+91 9595996295',
     phoneHref: 'tel:+919595996295',
     email: null,
