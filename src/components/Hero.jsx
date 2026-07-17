@@ -8,9 +8,8 @@ import ProductShowcase from './ProductShowcase';
 import { contactInfo } from '@/lib/data';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
-export default function Hero({ products = [] }) {
+export default function Hero({ hasShowcase = false }) {
   const reduceMotion = useReducedMotion();
-  const hasShowcase = products.length > 0;
 
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-28">
@@ -91,7 +90,7 @@ export default function Hero({ products = [] }) {
 
           {hasShowcase && (
             <div className="mt-4 lg:mt-0">
-              <ProductShowcase products={products} />
+              <ProductShowcase />
             </div>
           )}
         </div>

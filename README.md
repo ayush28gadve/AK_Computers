@@ -66,8 +66,10 @@ Until then the form shows a "not connected yet" notice and won't submit.
 ## Pending real content (placeholders in use)
 
 - Founding year ("35+ years" used as stand-in)
-- Hero product showcase images — see `public/products/README.md` for the
-  exact filenames to drop in; the composition activates automatically
+- Hero product showcase image — save a single transparent composite PNG of
+  the product lineup as `public/hero-products.png` (800–1400px wide,
+  compressed, e.g. via tinypng.com); the hero's right-side showcase
+  activates automatically (rebuild/restart after adding)
 - Red/maroon versions of `public/logo.png` and wordmark PNGs (current files
   are the old orange identity)
 - Team photos (initials avatars used) — add an `image` field per member in `src/lib/data.js` and update `src/components/TeamCard.jsx`
